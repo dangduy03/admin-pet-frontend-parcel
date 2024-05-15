@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style/css/styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <!-- <span class="material-icons-outlined">search</span> -->
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">notifications</span>
+          <span class="material-icons-outlined">email</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="../../index.html"> 
+              <span class="material-icons-outlined">shopping_cart</span> SHOP PET</a>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="../../index.html"> 
+              <span class="material-icons-outlined">dashboard</span> Trang chủ
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="./productAdmin.html" >
+              <span class="material-icons-outlined">inventory_2</span> Sản phẩm
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="./categoryAdmin.html" >
+              <span class="material-icons-outlined">category</span>Danh mục
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="./feedbackAdmin.html" >
+              <span class="material-icons-outlined">feedback</span> Bình luận
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="./userAdmin.html" >
+              <span class="material-icons-outlined">fact_check</span> Người dùng
+            </a>
+          </li>
+          <!-- <li class="sidebar-list-item">
+            <a href="#" >
+              <span class="material-icons-outlined">poll</span> Reports
+            </a>
+          </li> -->
+          <li class="sidebar-list-item">
+            <a href="#" >
+              <span class="material-icons-outlined">settings</span> Cài đặt
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="container mt-3 text-center">
+        <div class="main-title">
+          <h2 style="color: aliceblue;">SẢN PHẨM</h2>
+        </div>
+  <div class="input-btn mt-3">
+          <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <div class="add-product bg-white text-center ">
+          <p>Thêm sản phẩm</p>
+        </div>
+        </div>
+        <br>
+        <table class="table table-bordered table-product ">
+          <thead>
+            <tr>
+              <th>Tên sản phẩm</th>
+              <th>Hình ảnh</th>
+              <th>Giá tiền </th>
+              <th >Mô tả</th>
+              <th>Chức năng</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr  class="list-product">
+              <td>Mèo hoàng gia</td>
+              <td><img src="../images/vscode.png" alt=""></td>
+              <td>2.000.000 VND</td>
+              <!-- <td></td> -->
+              <div id="descriptionPopup" class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, cupiditate, voluptatum fugiat assumenda reprehenderit id nihil illo error dolorum quis minima nostrum natus ex velit autem perferendis at accusantium quisquam. Exercitationem minima, corporis necessitatibus at distinctio sint, harum ratione ipsam cum aliquid quidem fugiat excepturi. Est quo aliquid provident ab!.</div>
+              <td class=" table-decreption" onmousemove="showDescription(event)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, vel.</td>
+              <td>
+                <button>Sửa</button>
+                <button>Xóa</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <!-- Custom JS -->
+    <!-- <script src="js/scripts.js"></script> -->
+<script src="../js/search.js"></script>
+<script src="../js/configAPIproduct.js"></script>
+<script>
+  
+   let isChecked= false;
+function showDescription(event) {
+    var popup = document.getElementById("descriptionPopup");
+    var x = event.clientX;
+    var y = event.clientY;
+    popup.style.display = "block";
+    popup.style.left = (x + 2) + "px"; // Hiển thị mô tả với vị trí ngay dưới con chuột
+    popup.style.top = (y + 2) + "px";
+   isChecked = true;
+}
+document.addEventListener ('click',(event) =>{
+  var popup = document.getElementById("descriptionPopup");
+    if (!popup.contains(event.target)) { 
+        popup.style.display = "none"; 
+       isChecked = false; 
+    }
+
+})
+
+// document.onmouseleave = function() {
+//     var popup = document.getElementById("descriptionPopup");
+//     popup.addEventListener('click', () =>{
+//       // if(let = c > (x+5)){
+//       //   c.remove();
+//       // }
+//     })
+    
+// };
+
+</script>
+  </body>
+</html>
