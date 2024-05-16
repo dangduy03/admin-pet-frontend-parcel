@@ -4,7 +4,8 @@ import { API_ENDPOINTS } from "../utils/apiRoute";
 import { DataContext } from "../utils/dataContext";
 
 function ChartAdmin() {
-  useEffect(() => {
+  // M check thử xem s nó render ra 1 cái 3 lần v =))
+  useEffect(() => { 
     // BAR CHART
     const barChartOptions = {
       series: [
@@ -238,11 +239,11 @@ function ChartAdmin() {
     );
     areaChart.render();
   }, []); // Empty dependency array means this effect will run once after the first render
-
+ 
   return (
-    <div>
+    <div> 
       <div id="bar-chart"></div>
-      <div id="area-chart"></div>
+      <div id="area-chart"></div> 
     </div>
   );
 }

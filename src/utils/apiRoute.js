@@ -9,6 +9,15 @@ export const API_ENDPOINTS = {
     OTP: `${API_BASE_URL}/auth/send-otp`,
     OTP_VERIFY: `${API_BASE_URL}/auth/verified-otp`,
   },
+  PRODUCT:{
+    BASE: `/product`,
+  },
+  CATEGORY:{
+BASE:`/category`
+  },
+  USER:{
+    BASE:`/user`
+  }
 };// nơi khai báo các enpoint route
 
 export default API_BASE_URL;

@@ -41,7 +41,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom";
         const { access_token } = response.data;
         if (access_token) {
           // alert("Login successfully");
-          history.push("/index.html")
+          history.push("/")
         }
       } catch (error) {
         console.log(error);

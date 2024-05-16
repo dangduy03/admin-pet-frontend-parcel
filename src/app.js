@@ -3,48 +3,34 @@ import React, { useState, useEffect } from "react";
 import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import homePageAdmin from "./pages/homePages.admin";
 import LoginAdmin from "./loginAdmin";
-// import Register from "./page/register";
-// import Otp from "./page/otp";
+import ProductAdmin from "./pages/productAdmin";
+import HandleHomePage from "./pages/handleHomePage";
+import categoryAdmin from "./pages/categoryAdmin";
+import accountUser from "./pages/userAdmin";
+import feedback from "./pages/feedbackAdmin";
 
 function AppAdmin() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const history = useHistory();
-
-  useEffect(() => {
-    // Kiểm tra trạng thái đăng nhập từ localStorage
-    const token = localStorage.getItem("token");
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
-  const handleLogin = (token) => {
-    localStorage.setItem("token", token);
-    setIsLoggedIn(true);
-    history.push("/");
-  };
-
   return (
     <div>
       <Switch>
-        <Route path="/login">
-          <LoginAdmin onLogin={handleLogin} />
-        </Route>
-        <PrivateRoute path="/" exact component={homePageAdmin} isLoggedIn={isLoggedIn} />
-        <Route path="/" component={homePageAdmin} />
-        {/* <Route path="/otp" component={Otp} /> */}
+        <Route path="/" exact component={HandleHomePage}/>
+        <Route path="/home" component={homePageAdmin} />
+        <Route path="/product" component={ProductAdmin}/>
+        <Route path="/category" component={categoryAdmin}/>
+        <Route path="/accountUser" component={accountUser}/>
+        <Route path="/feedback" component={feedback}/>
       </Switch>
     </div>
   );
 }
 
-const PrivateRoute = ({ component: Component, isLoggedIn, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      isLoggedIn ? <Component {...props} /> : <Redirect to="/login" />
-    }
-  />
-);
+// const PrivateRoute = ({ component: Component, isLoggedIn, ...rest }) => (
+//   <Route
+//     {...rest}
+//     render={(props) =>
+//       isLoggedIn ? <Component {...props} /> : <Redirect to="/login" />
+//     }
+//   />
+// );
 
 export default AppAdmin;

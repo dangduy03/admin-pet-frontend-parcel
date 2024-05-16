@@ -1,73 +1,35 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../style/pages/style.admin.css";
-import { Link } from "react-router-dom";
+import HeaderAdmin from "../components/header.admin";
+import SlidebarAdmin from "../components/slidebar.admin";
+import ChartAdmin from "./chart"
+import apiService from "../services/apiService";
+import { API_ENDPOINTS } from "../utils/apiRoute";
+import getApiHooks from "../utils/getApiHook";
+import accountUser from "./userAdmin";
+import handleProduct from "./handleProduct";
+
 function homePageAdmin() {
+  const [product, setProduct] = useState([]);
+  const [category, setCategory] = useState([])
+  const [accountUser, setAccountUser] = useState([])
+
+  useEffect(() => {
+    const Data = async () => {
+      await Promise.all([
+        getApiHooks(setProduct, API_ENDPOINTS.PRODUCT.BASE),
+        getApiHooks(setCategory, API_ENDPOINTS.CATEGORY.BASE),
+        getApiHooks(setAccountUser, API_ENDPOINTS.USER.BASE)
+      ]);
+    };
+
+    Data();
+  }, []);
+
   return (
     <div class="grid-container">
-      <header class="header">
-        <div class="menu-icon" onclick="openSidebar()">
-          <span class="material-icons-outlined">menu</span>
-        </div>
-        <div class="header-left"></div>
-        <div class="header-right">
-          <span class="material-icons-outlined">notifications</span>
-          <span class="material-icons-outlined">email</span>
-          <div class="logout">
-            <span id="logoutAdmin" class="material-icons-outlined">
-              account_circle
-            </span>
-          </div>
-        </div>
-      </header>
-
-      <aside id="sidebar">
-        <div class="sidebar-title">
-          <div class="sidebar-brand">
-            <a href="">
-              <span class="material-icons-outlined">shopping_cart</span> SHOP
-              PET
-            </a>
-          </div>
-          <span class="material-icons-outlined" onclick="closeSidebar()">
-            close
-          </span>
-        </div>
-
-        <ul class="sidebar-list">
-          <li class="sidebar-list-item">
-            <a href="#">
-              <span class="material-icons-outlined">dashboard</span> Trang chủ
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="./src/pages/productAdmin.html">
-              <span class="material-icons-outlined">inventory_2</span> Sản phẩm
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="./src/pages/categoryAdmin.html">
-              <span class="material-icons-outlined">category</span>Danh mục
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="./src/pages/feedbackAdmin.html">
-              <span class="material-icons-outlined">feedback</span> Bình luận
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="./src/pages/userAdmin.html">
-              <span class="material-icons-outlined">fact_check</span> Người dùng
-            </a>
-          </li>
-
-          <li class="sidebar-list-item">
-            <a href="#">
-              <span class="material-icons-outlined">settings</span> Cài đặt
-            </a>
-          </li>
-        </ul>
-      </aside>
-
+      <HeaderAdmin />
+      <SlidebarAdmin />
       <main class="main-container">
         <div class="main-title">
           <h2>TRANG CHỦ</h2>
@@ -76,10 +38,11 @@ function homePageAdmin() {
         <div class="main-cards">
           <div class="card">
             <div class="card-inner">
-              <h3>SẢN PHẨM</h3>
+              <h3 >SẢN PHẨM</h3>
               <span class="material-icons-outlined">inventory_2</span>
             </div>
-            <h1>249</h1>
+            <h1>
+              {product.length}</h1>
           </div>
 
           <div class="card">
@@ -87,7 +50,7 @@ function homePageAdmin() {
               <h3>DANH MỤC</h3>
               <span class="material-icons-outlined">category</span>
             </div>
-            <h1>25</h1>
+            <h1>{category.length}</h1>
           </div>
 
           <div class="card">
@@ -95,7 +58,7 @@ function homePageAdmin() {
               <h3>KHÁCH HÀNG</h3>
               <span class="material-icons-outlined">groups</span>
             </div>
-            <h1>1500</h1>
+            <h1>{accountUser.length}</h1>
           </div>
 
           <div class="card">
@@ -115,11 +78,12 @@ function homePageAdmin() {
 
           <div class="charts-card">
             <h2 class="chart-title">Mua và bán hàng</h2>
-            <div id="area-chart"></div>
+            <ChartAdmin />
           </div>
         </div>
       </main>
     </div>
+
   );
 }
 export default homePageAdmin;
