@@ -6,6 +6,7 @@ import "../style/pages/style.admin.css"
 import HeaderAdmin from "../components/header.admin";
 import apiService from "../services/apiService";
 import { API_ENDPOINTS } from "../utils/apiRoute";
+import Search from "../components/search";
 
 function categoryAdmin() {
   const [category, setCategory] = useState([]);
@@ -18,8 +19,8 @@ function categoryAdmin() {
       }
     }
     getCategoryData();
-  } 
-  , [])
+  }
+    , [])
 
 
   return (
@@ -45,18 +46,18 @@ function categoryAdmin() {
             </tr>
           </thead>
           <tbody id="myTable">
-            {category.map ((category)=>(
-            <tr>
-              <td>{category.name}</td>
-              <td>
-                <button>Sửa</button>
-                <button>Xóa</button>
-              </td>
-            </tr>
+            {category.map((category) => (
+              <tr>
+                <td>{category.name}</td>
+                <td>
+                  <button>Sửa</button>
+                  <button>Xóa</button>
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>
-
+        <Search />
       </div>
     </div>
   )

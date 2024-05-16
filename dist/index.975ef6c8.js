@@ -48928,6 +48928,7 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$4915.prelude(module);
 
 try {
+// Trong ProductAdmin.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
@@ -48937,7 +48938,8 @@ var _headerAdmin = require("../components/header.admin");
 var _headerAdminDefault = parcelHelpers.interopDefault(_headerAdmin);
 var _slidebarAdmin = require("../components/slidebar.admin");
 var _slidebarAdminDefault = parcelHelpers.interopDefault(_slidebarAdmin);
-var _styleAdminCss = require("../style/pages/style.admin.css");
+var _search = require("../components/search"); // Đảm bảo đường dẫn đúng
+var _searchDefault = parcelHelpers.interopDefault(_search);
 var _apiService = require("../services/apiService");
 var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
 var _apiRoute = require("../utils/apiRoute");
@@ -48953,16 +48955,16 @@ function ProductAdmin() {
         (0, _getApiHookDefault.default)(setProduct, (0, _apiRoute.API_ENDPOINTS).PRODUCT.BASE);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        class: "grid-container",
+        className: "grid-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/productAdmin.js",
-                lineNumber: 22,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/productAdmin.js",
-                lineNumber: 24,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -48977,12 +48979,12 @@ function ProductAdmin() {
                             children: "S\u1EA2N PH\u1EA8M"
                         }, void 0, false, {
                             fileName: "src/pages/productAdmin.js",
-                            lineNumber: 28,
+                            lineNumber: 24,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/pages/productAdmin.js",
-                        lineNumber: 27,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -48995,7 +48997,7 @@ function ProductAdmin() {
                                 placeholder: "Search.."
                             }, void 0, false, {
                                 fileName: "src/pages/productAdmin.js",
-                                lineNumber: 31,
+                                lineNumber: 27,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -49004,27 +49006,27 @@ function ProductAdmin() {
                                     children: "Th\xeam s\u1EA3n ph\u1EA9m"
                                 }, void 0, false, {
                                     fileName: "src/pages/productAdmin.js",
-                                    lineNumber: 33,
+                                    lineNumber: 29,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/productAdmin.js",
-                                lineNumber: 32,
+                                lineNumber: 28,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/productAdmin.js",
-                        lineNumber: 30,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/pages/productAdmin.js",
-                        lineNumber: 36,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
-                        className: "table table-bordered table-product ",
+                        className: "table table-bordered table-product",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
@@ -49033,53 +49035,53 @@ function ProductAdmin() {
                                             children: "T\xean s\u1EA3n ph\u1EA9m"
                                         }, void 0, false, {
                                             fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 40,
+                                            lineNumber: 36,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "H\xecnh \u1EA3nh"
                                         }, void 0, false, {
                                             fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 41,
+                                            lineNumber: 37,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "Gi\xe1 ti\u1EC1n "
+                                            children: "Gi\xe1 ti\u1EC1n"
                                         }, void 0, false, {
                                             fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 42,
+                                            lineNumber: 38,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Xu\u1EA5t x\u1EE9"
                                         }, void 0, false, {
                                             fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 43,
+                                            lineNumber: 39,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "M\xf4 t\u1EA3"
                                         }, void 0, false, {
                                             fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 44,
+                                            lineNumber: 40,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Ch\u1EE9c n\u0103ng"
                                         }, void 0, false, {
                                             fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 45,
+                                            lineNumber: 41,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/productAdmin.js",
-                                    lineNumber: 39,
+                                    lineNumber: 35,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/productAdmin.js",
-                                lineNumber: 38,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -49091,7 +49093,7 @@ function ProductAdmin() {
                                                 children: product.name
                                             }, void 0, false, {
                                                 fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 51,
+                                                lineNumber: 47,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -49100,12 +49102,12 @@ function ProductAdmin() {
                                                     alt: ""
                                                 }, void 0, false, {
                                                     fileName: "src/pages/productAdmin.js",
-                                                    lineNumber: 52,
+                                                    lineNumber: 48,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 52,
+                                                lineNumber: 48,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
@@ -49115,85 +49117,80 @@ function ProductAdmin() {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 53,
+                                                lineNumber: 49,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: product.origin
                                             }, void 0, false, {
                                                 fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 54,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                                id: "descriptionPopup",
-                                                className: "hidden",
-                                                children: product.description
-                                            }, void 0, false, {
-                                                fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 55,
+                                                lineNumber: 50,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                className: " table-decreption",
-                                                onmousemove: "showDescription(event)",
                                                 children: product.description
                                             }, void 0, false, {
                                                 fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 56,
+                                                lineNumber: 51,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        onClick: (0, _handleProductDefault.default),
+                                                        onClick: ()=>(0, _handleProductDefault.default)(product.id),
                                                         children: "S\u1EEDa"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/productAdmin.js",
-                                                        lineNumber: 58,
+                                                        lineNumber: 53,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        id: "deleteProduct",
+                                                        id: `deleteProduct${product.id}`,
+                                                        onClick: ()=>handleDelete(product.id),
                                                         children: "X\xf3a"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/productAdmin.js",
-                                                        lineNumber: 59,
+                                                        lineNumber: 54,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 57,
+                                                lineNumber: 52,
                                                 columnNumber: 17
                                             }, this)
                                         ]
-                                    }, void 0, true, {
+                                    }, product.id, true, {
                                         fileName: "src/pages/productAdmin.js",
-                                        lineNumber: 50,
+                                        lineNumber: 46,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "src/pages/productAdmin.js",
-                                lineNumber: 48,
+                                lineNumber: 44,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/productAdmin.js",
-                        lineNumber: 37,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/productAdmin.js",
-                lineNumber: 26,
+                lineNumber: 22,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
+                fileName: "src/pages/productAdmin.js",
+                lineNumber: 61,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/pages/productAdmin.js",
-        lineNumber: 21,
+        lineNumber: 19,
         columnNumber: 5
     }, this);
 }
@@ -49208,7 +49205,51 @@ $RefreshReg$(_c, "ProductAdmin");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../style/pages/style.admin.css":"iDKH6","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","../utils/getApiHook":"6o6Zk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./handleProduct":"75ze5"}],"iDKH6":[function() {},{}],"9n8ah":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","../utils/getApiHook":"6o6Zk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./handleProduct":"75ze5","../components/search":"7LAev"}],"7LAev":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$da2d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$da2d.prelude(module);
+
+try {
+// Trong Search.js
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function Search() {
+    _s();
+    (0, _react.useEffect)(()=>{
+        const handleSearch = ()=>{
+            const input = document.getElementById("myInput");
+            const filter = input.value.toLowerCase();
+            const rows = document.querySelectorAll("#myTable tr");
+            rows.forEach(function(row) {
+                const text = row.textContent.toLowerCase();
+                if (text.indexOf(filter) > -1) row.style.display = "";
+                else row.style.display = "none";
+            });
+        };
+        document.getElementById("myInput").addEventListener("keyup", handleSearch);
+        return ()=>{
+            document.getElementById("myInput").removeEventListener("keyup", handleSearch);
+        };
+    }, []);
+    return null;
+}
+_s(Search, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = Search;
+exports.default = Search;
+var _c;
+$RefreshReg$(_c, "Search");
+
+  $parcel$ReactRefreshHelpers$da2d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9n8ah":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$30e4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -49271,6 +49312,8 @@ var _styleAdminCss = require("../style/pages/style.admin.css");
 var _apiService = require("../services/apiService");
 var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
 var _apiRoute = require("../utils/apiRoute");
+var _search = require("../components/search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
 var _s = $RefreshSig$();
 function categoryAdmin() {
     _s();
@@ -49287,12 +49330,12 @@ function categoryAdmin() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/categoryAdmin.js",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/categoryAdmin.js",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -49307,12 +49350,12 @@ function categoryAdmin() {
                             children: "DANH M\u1EE4C"
                         }, void 0, false, {
                             fileName: "src/pages/categoryAdmin.js",
-                            lineNumber: 31,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 30,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -49325,7 +49368,7 @@ function categoryAdmin() {
                                 placeholder: "Search.."
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 34,
+                                lineNumber: 35,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -49334,23 +49377,23 @@ function categoryAdmin() {
                                     children: "Th\xeam danh m\u1EE5c"
                                 }, void 0, false, {
                                     fileName: "src/pages/categoryAdmin.js",
-                                    lineNumber: 36,
+                                    lineNumber: 37,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 35,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 33,
+                        lineNumber: 34,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 39,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
@@ -49363,25 +49406,25 @@ function categoryAdmin() {
                                             children: "T\xean danh m\u1EE5c"
                                         }, void 0, false, {
                                             fileName: "src/pages/categoryAdmin.js",
-                                            lineNumber: 43,
+                                            lineNumber: 44,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Ch\u1EE9c n\u0103ng"
                                         }, void 0, false, {
                                             fileName: "src/pages/categoryAdmin.js",
-                                            lineNumber: 44,
+                                            lineNumber: 45,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/categoryAdmin.js",
-                                    lineNumber: 42,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 41,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
@@ -49392,8 +49435,8 @@ function categoryAdmin() {
                                                 children: category.name
                                             }, void 0, false, {
                                                 fileName: "src/pages/categoryAdmin.js",
-                                                lineNumber: 50,
-                                                columnNumber: 15
+                                                lineNumber: 51,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: [
@@ -49401,49 +49444,54 @@ function categoryAdmin() {
                                                         children: "S\u1EEDa"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/categoryAdmin.js",
-                                                        lineNumber: 52,
-                                                        columnNumber: 17
+                                                        lineNumber: 53,
+                                                        columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                                         children: "X\xf3a"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/categoryAdmin.js",
-                                                        lineNumber: 53,
-                                                        columnNumber: 17
+                                                        lineNumber: 54,
+                                                        columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/categoryAdmin.js",
-                                                lineNumber: 51,
-                                                columnNumber: 15
+                                                lineNumber: 52,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/categoryAdmin.js",
-                                        lineNumber: 49,
-                                        columnNumber: 13
+                                        lineNumber: 50,
+                                        columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 47,
+                                lineNumber: 48,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 40,
+                        lineNumber: 41,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
+                        fileName: "src/pages/categoryAdmin.js",
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/categoryAdmin.js",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/pages/categoryAdmin.js",
-        lineNumber: 26,
+        lineNumber: 27,
         columnNumber: 5
     }, this);
 }
@@ -49455,7 +49503,7 @@ exports.default = categoryAdmin;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../style/pages/style.admin.css":"iDKH6","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iDKH6":[function() {},{}],"dbsSA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../style/pages/style.admin.css":"iDKH6","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/search":"7LAev"}],"iDKH6":[function() {},{}],"dbsSA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$89f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
