@@ -8,6 +8,7 @@ import { API_ENDPOINTS } from "../utils/apiRoute";
 import getApiHooks from "../utils/getApiHook";
 import accountUser from "./userAdmin";
 import handleProduct from "./handleProduct";
+import accountUser from "./userAdmin";
 
 function homePageAdmin() {
   const [product, setProduct] = useState([]);
@@ -38,35 +39,34 @@ function homePageAdmin() {
         <div class="main-cards">
           <div class="card">
             <div class="card-inner">
-              <h3 >SẢN PHẨM</h3>
+              <p >SẢN PHẨM</p>
               <span class="material-icons-outlined">inventory_2</span>
             </div>
-            <h1>
-              {product.length}</h1>
+            <p>{product.length}</p>
           </div>
 
           <div class="card">
             <div class="card-inner">
-              <h3>DANH MỤC</h3>
+              <p>DANH MỤC</p>
               <span class="material-icons-outlined">category</span>
             </div>
-            <h1>{category.length}</h1>
+            <p>{category.length}</p>
           </div>
 
           <div class="card">
             <div class="card-inner">
-              <h3>KHÁCH HÀNG</h3>
+              <p>NGƯỜI DÙNG</p>
               <span class="material-icons-outlined">groups</span>
             </div>
-            <h1>{accountUser.length}</h1>
+            <p>{accountUser.length}</p>
           </div>
 
           <div class="card">
             <div class="card-inner">
-              <h3>DOANH THU</h3>
+              <p>DOANH THU</p>
               <span class="material-icons-outlined">fact_check</span>
             </div>
-            <h1>56</h1>
+            <p>56</p>
           </div>
         </div>
 

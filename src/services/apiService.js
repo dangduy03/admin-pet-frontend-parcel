@@ -1,9 +1,8 @@
 // apiService.js
 import axios from "axios";
 import API_BASE_URL from "../utils/apiRoute";
-
+const bearToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNmMjRiYzZiZjczM2ZmZjU5ZWFkZTQiLCJ1c2VybmFtZSI6ImRhbmdkdXkwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcxNTc0MjUwMiwiZXhwIjoxNzE2MzQ3MzAyfQ._upZnOlUhHCDnVzsohQsf57q_U5bm_hETatOnlMO2hM'
 const token = localStorage.getItem("token");
-
 const apiService = axios.create({
   baseURL: API_BASE_URL,
   headers: {

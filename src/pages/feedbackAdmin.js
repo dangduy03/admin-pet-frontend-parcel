@@ -1,6 +1,7 @@
 import React from "react"
 import HeaderAdmin from "../components/header.admin"
 import SlidebarAdmin from "../components/slidebar.admin"
+import Search from "../components/search"
 function feedback() {
   return (
     <div class="grid-container">
@@ -32,30 +33,13 @@ function feedback() {
               <td>nontruong@gmail.com</td>
               <td>mèo đẹp quá</td>
               <td>
-                <button>Sửa</button>
-                <button>Xóa</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Trương Công Non</td>
-              <td>nontruong@gmail.com</td>
-              <td>mèo đẹp quá</td>
-              <td>
-                <button>Sửa</button>
-                <button>Xóa</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Trương Công Non</td>
-              <td>nontruong@gmail.com</td>
-              <td>mèo đẹp quá</td>
-              <td>
-                <button>Sửa</button>
-                <button>Xóa</button>
+                <button className="btn-handle">Sửa</button>
+                <button className="btn-handle">Xóa</button>
               </td>
             </tr>
           </tbody>
         </table>
+        <Search/>
 </div>
     </div>
   )

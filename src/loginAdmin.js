@@ -4,6 +4,8 @@ import { DataContext } from "./utils/dataContext";
 import apiService, { setAuthToken } from "./services/apiService";
 import { API_ENDPOINTS } from "./utils/apiRoute";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import {setAuthToken} from "./services/apiService"
+
 
   function Login() {
     const history = useHistory();
@@ -40,8 +42,8 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom";
         setLoading(false);
         const { access_token } = response.data;
         if (access_token) {
-          // alert("Login successfully");
-          history.push("/")
+          setAuthToken(access_token)
+          history.push("/home")
         }
       } catch (error) {
         console.log(error);

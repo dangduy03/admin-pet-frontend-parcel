@@ -19,9 +19,6 @@ function Search() {
 
     document.getElementById("myInput").addEventListener("keyup", handleSearch);
 
-    return () => {
-      document.getElementById("myInput").removeEventListener("keyup", handleSearch);
-    };
   }, []);
 
   return null;

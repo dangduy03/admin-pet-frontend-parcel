@@ -8,6 +8,7 @@ import HandleHomePage from "./pages/handleHomePage";
 import categoryAdmin from "./pages/categoryAdmin";
 import accountUser from "./pages/userAdmin";
 import feedback from "./pages/feedbackAdmin";
+import HandleLogout from "./pages/handleLogout";
 
 function AppAdmin() {
   return (
@@ -15,6 +16,7 @@ function AppAdmin() {
       <Switch>
         <Route path="/" exact component={HandleHomePage}/>
         <Route path="/home" component={homePageAdmin} />
+        <Route path="/login" component={LoginAdmin} />
         <Route path="/product" component={ProductAdmin}/>
         <Route path="/category" component={categoryAdmin}/>
         <Route path="/accountUser" component={accountUser}/>

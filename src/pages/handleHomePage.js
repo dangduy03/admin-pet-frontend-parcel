@@ -5,13 +5,13 @@ function HandleHomePage() {
     const history = useHistory();
     useEffect(() => {
         const token = localStorage.getItem("token");
+        print(token)
         if (token != undefined || token != null) {
             history.push("/home");
         } else {
             history.push("/login")
         }
-    }, [])  
-
+    },[])  
     return <div></div>
 }
 

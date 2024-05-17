@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../style/pages/style.admin.css"
 function SlidebarAdmin() {
-  return (
+  const history  = useHistory();
+  useEffect(() => {
+    const logout = document.getElementById("logout-item");
+    const handleLogout = () => {
+      alert('aabvd');
+      localStorage.removeItem("token");
+      history.push('/home');
+    };
+    
+    if (logout) {
+      logout.addEventListener("click", handleLogout);
+    }
+  }, [history]);
 
+  return (
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
             <span class="material-icons-outlined">shopping_cart</span>
-            <Link to="/"> SHOP
+            <Link to="/home"> SHOP
               PET</Link>
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()">
@@ -20,7 +34,7 @@ function SlidebarAdmin() {
           <li class="sidebar-list-item">
 
             <span class="material-icons-outlined">dashboard</span>
-            <Link to="/"> Trang chủ</Link>
+            <Link to="/home"> Trang chủ</Link>
           </li>
           <li class="sidebar-list-item">
             <span class="material-icons-outlined">inventory_2</span>
@@ -49,9 +63,11 @@ function SlidebarAdmin() {
               <span class="material-icons-outlined">settings</span> Cài đặt
             </a>
           </li>
+          <li class="sidebar-list-item">
+              <span id="logout-item" class="material-icons-outlined">logout</span> Đăng xuất
+          </li>
         </ul>
       </aside>
-
   )
 }
 export default SlidebarAdmin;

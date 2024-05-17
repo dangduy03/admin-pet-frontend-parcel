@@ -27816,6 +27816,8 @@ var _userAdmin = require("./pages/userAdmin");
 var _userAdminDefault = parcelHelpers.interopDefault(_userAdmin);
 var _feedbackAdmin = require("./pages/feedbackAdmin");
 var _feedbackAdminDefault = parcelHelpers.interopDefault(_feedbackAdmin);
+var _handleLogout = require("./pages/handleLogout");
+var _handleLogoutDefault = parcelHelpers.interopDefault(_handleLogout);
 function AppAdmin() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Switch), {
@@ -27826,7 +27828,7 @@ function AppAdmin() {
                     component: (0, _handleHomePageDefault.default)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 16,
+                    lineNumber: 17,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27834,7 +27836,15 @@ function AppAdmin() {
                     component: (0, _homePagesAdminDefault.default)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 17,
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
+                    path: "/login",
+                    component: (0, _loginAdminDefault.default)
+                }, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27842,7 +27852,7 @@ function AppAdmin() {
                     component: (0, _productAdminDefault.default)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 18,
+                    lineNumber: 20,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27850,7 +27860,7 @@ function AppAdmin() {
                     component: (0, _categoryAdminDefault.default)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 19,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27858,7 +27868,7 @@ function AppAdmin() {
                     component: (0, _userAdminDefault.default)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 20,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -27866,18 +27876,18 @@ function AppAdmin() {
                     component: (0, _feedbackAdminDefault.default)
                 }, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 21,
+                    lineNumber: 23,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/app.js",
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/app.js",
-        lineNumber: 14,
+        lineNumber: 15,
         columnNumber: 5
     }, this);
 }
@@ -27899,7 +27909,7 @@ $RefreshReg$(_c, "AppAdmin");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./pages/homePages.admin":"aR0dp","./loginAdmin":"1cCLT","./pages/productAdmin":"6piCr","./pages/handleHomePage":"9n8ah","./pages/categoryAdmin":"iCqZw","./pages/userAdmin":"16coH","./pages/feedbackAdmin":"dbsSA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aR0dp":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"cHIiW","./pages/homePages.admin":"aR0dp","./loginAdmin":"1cCLT","./pages/productAdmin":"6piCr","./pages/handleHomePage":"9n8ah","./pages/categoryAdmin":"iCqZw","./pages/userAdmin":"16coH","./pages/feedbackAdmin":"dbsSA","./pages/handleLogout":"h9my2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"aR0dp":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4adf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27948,12 +27958,12 @@ function homePageAdmin() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/homePages.admin.js",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/homePages.admin.js",
-                lineNumber: 32,
+                lineNumber: 33,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -27965,12 +27975,12 @@ function homePageAdmin() {
                             children: "TRANG CH\u1EE6"
                         }, void 0, false, {
                             fileName: "src/pages/homePages.admin.js",
-                            lineNumber: 35,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/pages/homePages.admin.js",
-                        lineNumber: 34,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27982,11 +27992,11 @@ function homePageAdmin() {
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         class: "card-inner",
                                         children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                                 children: "S\u1EA2N PH\u1EA8M"
                                             }, void 0, false, {
                                                 fileName: "src/pages/homePages.admin.js",
-                                                lineNumber: 41,
+                                                lineNumber: 42,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -27994,26 +28004,26 @@ function homePageAdmin() {
                                                 children: "inventory_2"
                                             }, void 0, false, {
                                                 fileName: "src/pages/homePages.admin.js",
-                                                lineNumber: 42,
+                                                lineNumber: 43,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/homePages.admin.js",
-                                        lineNumber: 40,
+                                        lineNumber: 41,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: product.length
                                     }, void 0, false, {
                                         fileName: "src/pages/homePages.admin.js",
-                                        lineNumber: 44,
+                                        lineNumber: 45,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/pages/homePages.admin.js",
-                                lineNumber: 39,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28022,7 +28032,7 @@ function homePageAdmin() {
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         class: "card-inner",
                                         children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                                 children: "DANH M\u1EE4C"
                                             }, void 0, false, {
                                                 fileName: "src/pages/homePages.admin.js",
@@ -28043,7 +28053,7 @@ function homePageAdmin() {
                                         lineNumber: 49,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: category.length
                                     }, void 0, false, {
                                         fileName: "src/pages/homePages.admin.js",
@@ -28062,8 +28072,8 @@ function homePageAdmin() {
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         class: "card-inner",
                                         children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                                children: "KH\xc1CH H\xc0NG"
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                children: "NG\u01AF\u1EDCI D\xd9NG"
                                             }, void 0, false, {
                                                 fileName: "src/pages/homePages.admin.js",
                                                 lineNumber: 58,
@@ -28083,7 +28093,7 @@ function homePageAdmin() {
                                         lineNumber: 57,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: accountUser.length
                                     }, void 0, false, {
                                         fileName: "src/pages/homePages.admin.js",
@@ -28102,7 +28112,7 @@ function homePageAdmin() {
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         class: "card-inner",
                                         children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                                 children: "DOANH THU"
                                             }, void 0, false, {
                                                 fileName: "src/pages/homePages.admin.js",
@@ -28123,7 +28133,7 @@ function homePageAdmin() {
                                         lineNumber: 65,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: "56"
                                     }, void 0, false, {
                                         fileName: "src/pages/homePages.admin.js",
@@ -28139,7 +28149,7 @@ function homePageAdmin() {
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/homePages.admin.js",
-                        lineNumber: 38,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28200,13 +28210,13 @@ function homePageAdmin() {
                 ]
             }, void 0, true, {
                 fileName: "src/pages/homePages.admin.js",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/pages/homePages.admin.js",
-        lineNumber: 30,
+        lineNumber: 31,
         columnNumber: 5
     }, this);
 }
@@ -28544,9 +28554,24 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _reactRouterDomMin = require("react-router-dom/cjs/react-router-dom.min");
 var _styleAdminCss = require("../style/pages/style.admin.css");
+var _s = $RefreshSig$();
 function SlidebarAdmin() {
+    _s();
+    const history = (0, _reactRouterDom.useHistory)();
+    (0, _react.useEffect)(()=>{
+        const logout = document.getElementById("logout-item");
+        const handleLogout = ()=>{
+            alert("aabvd");
+            localStorage.removeItem("token");
+            history.push("/home");
+        };
+        if (logout) logout.addEventListener("click", handleLogout);
+    }, [
+        history
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("aside", {
         id: "sidebar",
         children: [
@@ -28561,21 +28586,21 @@ function SlidebarAdmin() {
                                 children: "shopping_cart"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 10,
+                                lineNumber: 24,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDomMin.Link), {
-                                to: "/",
+                                to: "/home",
                                 children: " SHOP PET"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 11,
+                                lineNumber: 25,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 9,
+                        lineNumber: 23,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -28584,13 +28609,13 @@ function SlidebarAdmin() {
                         children: "close"
                     }, void 0, false, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 14,
+                        lineNumber: 28,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/slidebar.admin.js",
-                lineNumber: 8,
+                lineNumber: 22,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -28604,21 +28629,21 @@ function SlidebarAdmin() {
                                 children: "dashboard"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 22,
+                                lineNumber: 36,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDomMin.Link), {
-                                to: "/",
+                                to: "/home",
                                 children: " Trang ch\u1EE7"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 23,
+                                lineNumber: 37,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 20,
+                        lineNumber: 34,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -28629,7 +28654,7 @@ function SlidebarAdmin() {
                                 children: "inventory_2"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 26,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDomMin.Link), {
@@ -28637,13 +28662,13 @@ function SlidebarAdmin() {
                                 children: "S\u1EA3n ph\u1EA9m"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 27,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 25,
+                        lineNumber: 39,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -28654,7 +28679,7 @@ function SlidebarAdmin() {
                                 children: "category"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 30,
+                                lineNumber: 44,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDomMin.Link), {
@@ -28662,13 +28687,13 @@ function SlidebarAdmin() {
                                 children: "Danh m\u1EE5c"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 31,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 29,
+                        lineNumber: 43,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -28681,12 +28706,12 @@ function SlidebarAdmin() {
                                     children: "feedback"
                                 }, void 0, false, {
                                     fileName: "src/components/slidebar.admin.js",
-                                    lineNumber: 35,
+                                    lineNumber: 49,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 34,
+                                lineNumber: 48,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDomMin.Link), {
@@ -28694,13 +28719,13 @@ function SlidebarAdmin() {
                                 children: "B\xecnh lu\u1EADn"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 37,
+                                lineNumber: 51,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 33,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -28710,7 +28735,7 @@ function SlidebarAdmin() {
                                 href: "./src/pages/userAdmin.html"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 40,
+                                lineNumber: 54,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -28718,7 +28743,7 @@ function SlidebarAdmin() {
                                 children: "fact_check"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 43,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDomMin.Link), {
@@ -28726,13 +28751,13 @@ function SlidebarAdmin() {
                                 children: "  Ng\u01B0\u1EDDi d\xf9ng"
                             }, void 0, false, {
                                 fileName: "src/components/slidebar.admin.js",
-                                lineNumber: 44,
+                                lineNumber: 58,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 39,
+                        lineNumber: 53,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -28745,34 +28770,58 @@ function SlidebarAdmin() {
                                     children: "settings"
                                 }, void 0, false, {
                                     fileName: "src/components/slidebar.admin.js",
-                                    lineNumber: 49,
+                                    lineNumber: 63,
                                     columnNumber: 15
                                 }, this),
                                 " C\xe0i \u0111\u1EB7t"
                             ]
                         }, void 0, true, {
                             fileName: "src/components/slidebar.admin.js",
-                            lineNumber: 48,
+                            lineNumber: 62,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "src/components/slidebar.admin.js",
-                        lineNumber: 47,
+                        lineNumber: 61,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        class: "sidebar-list-item",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                id: "logout-item",
+                                class: "material-icons-outlined",
+                                children: "logout"
+                            }, void 0, false, {
+                                fileName: "src/components/slidebar.admin.js",
+                                lineNumber: 67,
+                                columnNumber: 15
+                            }, this),
+                            " \u0110\u0103ng xu\u1EA5t"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/slidebar.admin.js",
+                        lineNumber: 66,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/slidebar.admin.js",
-                lineNumber: 19,
+                lineNumber: 33,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/slidebar.admin.js",
-        lineNumber: 7,
+        lineNumber: 21,
         columnNumber: 7
     }, this);
 }
+_s(SlidebarAdmin, "bz2N+u0mX89LO9zOCfVCA9Sa20M=", false, function() {
+    return [
+        (0, _reactRouterDom.useHistory)
+    ];
+});
 _c = SlidebarAdmin;
 exports.default = SlidebarAdmin;
 var _c;
@@ -28783,7 +28832,7 @@ $RefreshReg$(_c, "SlidebarAdmin");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom/cjs/react-router-dom.min":"4Y83O","../style/pages/style.admin.css":"iDKH6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iDKH6":[function() {},{}],"eVOGj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom/cjs/react-router-dom.min":"4Y83O","../style/pages/style.admin.css":"iDKH6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"cHIiW"}],"iDKH6":[function() {},{}],"eVOGj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$692e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -46915,6 +46964,7 @@ var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _apiRoute = require("../utils/apiRoute");
 var _apiRouteDefault = parcelHelpers.interopDefault(_apiRoute);
+const bearToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjNmMjRiYzZiZjczM2ZmZjU5ZWFkZTQiLCJ1c2VybmFtZSI6ImRhbmdkdXkwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTcxNTc0MjUwMiwiZXhwIjoxNzE2MzQ3MzAyfQ._upZnOlUhHCDnVzsohQsf57q_U5bm_hETatOnlMO2hM";
 const token = localStorage.getItem("token");
 const apiService = (0, _axiosDefault.default).create({
     baseURL: (0, _apiRouteDefault.default),
@@ -48171,6 +48221,8 @@ var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
 var _apiRoute = require("../utils/apiRoute");
 var _getApiHook = require("../utils/getApiHook");
 var _getApiHookDefault = parcelHelpers.interopDefault(_getApiHook);
+var _search = require("../components/search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
 var _s = $RefreshSig$();
 function accountUser() {
     _s();
@@ -48183,13 +48235,13 @@ function accountUser() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/userAdmin.js",
-                lineNumber: 17,
-                columnNumber: 5
+                lineNumber: 21,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/userAdmin.js",
-                lineNumber: 18,
-                columnNumber: 5
+                lineNumber: 22,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 class: "container mt-3 text-center",
@@ -48203,13 +48255,13 @@ function accountUser() {
                             children: "NG\u01AF\u1EDCI D\xd9NG"
                         }, void 0, false, {
                             fileName: "src/pages/userAdmin.js",
-                            lineNumber: 21,
-                            columnNumber: 7
+                            lineNumber: 25,
+                            columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/pages/userAdmin.js",
-                        lineNumber: 20,
-                        columnNumber: 5
+                        lineNumber: 24,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         class: "input-btn mt-3",
@@ -48221,8 +48273,8 @@ function accountUser() {
                                 placeholder: "Search.."
                             }, void 0, false, {
                                 fileName: "src/pages/userAdmin.js",
-                                lineNumber: 24,
-                                columnNumber: 7
+                                lineNumber: 28,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 class: "add-product bg-white text-center ",
@@ -48230,24 +48282,24 @@ function accountUser() {
                                     children: "Th\xeam s\u1EA3n ph\u1EA9m"
                                 }, void 0, false, {
                                     fileName: "src/pages/userAdmin.js",
-                                    lineNumber: 26,
-                                    columnNumber: 8
+                                    lineNumber: 30,
+                                    columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/userAdmin.js",
-                                lineNumber: 25,
-                                columnNumber: 3
+                                lineNumber: 29,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/userAdmin.js",
-                        lineNumber: 23,
-                        columnNumber: 1
+                        lineNumber: 27,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/pages/userAdmin.js",
-                        lineNumber: 29,
-                        columnNumber: 5
+                        lineNumber: 33,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
                         class: "table table-bordered table-product ",
@@ -48259,47 +48311,54 @@ function accountUser() {
                                             children: "T\xean ng\u01B0\u1EDDi d\xf9ng"
                                         }, void 0, false, {
                                             fileName: "src/pages/userAdmin.js",
-                                            lineNumber: 33,
-                                            columnNumber: 11
+                                            lineNumber: 37,
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "H\u1ECD v\xe0 t\xean "
                                         }, void 0, false, {
                                             fileName: "src/pages/userAdmin.js",
-                                            lineNumber: 34,
-                                            columnNumber: 11
+                                            lineNumber: 38,
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Email"
                                         }, void 0, false, {
                                             fileName: "src/pages/userAdmin.js",
-                                            lineNumber: 35,
-                                            columnNumber: 11
+                                            lineNumber: 39,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Tr\u1EA1ng th\xe1i"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/userAdmin.js",
+                                            lineNumber: 40,
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "\u0110\u1ECBa ch\u1EC9"
                                         }, void 0, false, {
                                             fileName: "src/pages/userAdmin.js",
-                                            lineNumber: 36,
-                                            columnNumber: 11
+                                            lineNumber: 41,
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Ch\u1EE9c n\u0103ng"
                                         }, void 0, false, {
                                             fileName: "src/pages/userAdmin.js",
-                                            lineNumber: 37,
-                                            columnNumber: 11
+                                            lineNumber: 42,
+                                            columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/userAdmin.js",
-                                    lineNumber: 32,
-                                    columnNumber: 9
+                                    lineNumber: 36,
+                                    columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/userAdmin.js",
-                                lineNumber: 31,
-                                columnNumber: 7
+                                lineNumber: 35,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
                                 id: "myTable",
@@ -48309,83 +48368,97 @@ function accountUser() {
                                                 children: accountUser.username
                                             }, void 0, false, {
                                                 fileName: "src/pages/userAdmin.js",
-                                                lineNumber: 43,
-                                                columnNumber: 11
+                                                lineNumber: 48,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: accountUser.fullName
                                             }, void 0, false, {
                                                 fileName: "src/pages/userAdmin.js",
-                                                lineNumber: 45,
-                                                columnNumber: 11
+                                                lineNumber: 49,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: accountUser.email
                                             }, void 0, false, {
                                                 fileName: "src/pages/userAdmin.js",
-                                                lineNumber: 46,
-                                                columnNumber: 11
+                                                lineNumber: 50,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "\u0110\u1EA1i H\u01B0ng- \u0110\u1EA1i L\u1ED9c - Qu\u1EA3ng Nam"
+                                                children: accountUser.role
                                             }, void 0, false, {
                                                 fileName: "src/pages/userAdmin.js",
-                                                lineNumber: 47,
-                                                columnNumber: 11
+                                                lineNumber: 51,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: accountUser.address
+                                            }, void 0, false, {
+                                                fileName: "src/pages/userAdmin.js",
+                                                lineNumber: 52,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                        className: "btn-handle",
                                                         children: "S\u1EEDa"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/userAdmin.js",
-                                                        lineNumber: 49,
-                                                        columnNumber: 13
+                                                        lineNumber: 54,
+                                                        columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                        className: "btn-handle",
                                                         children: "X\xf3a"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/userAdmin.js",
-                                                        lineNumber: 50,
-                                                        columnNumber: 13
+                                                        lineNumber: 55,
+                                                        columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/userAdmin.js",
-                                                lineNumber: 48,
-                                                columnNumber: 11
+                                                lineNumber: 53,
+                                                columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/pages/userAdmin.js",
-                                        lineNumber: 42,
-                                        columnNumber: 9
+                                        lineNumber: 47,
+                                        columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "src/pages/userAdmin.js",
-                                lineNumber: 40,
-                                columnNumber: 7
+                                lineNumber: 45,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/userAdmin.js",
-                        lineNumber: 30,
-                        columnNumber: 5
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
+                        fileName: "src/pages/userAdmin.js",
+                        lineNumber: 61,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/userAdmin.js",
-                lineNumber: 19,
-                columnNumber: 5
+                lineNumber: 23,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/pages/userAdmin.js",
-        lineNumber: 16,
+        lineNumber: 20,
         columnNumber: 5
     }, this);
 }
-_s(accountUser, "ItHsAcXeucWM8a1n7YIipzA/QUA=");
+_s(accountUser, "Q8WlYbqdVYA/ue5PjWSpHokrVds=");
 exports.default = accountUser;
 
   $parcel$ReactRefreshHelpers$e396.postlude(module);
@@ -48393,7 +48466,825 @@ exports.default = accountUser;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../style/pages/style.admin.css":"iDKH6","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","../utils/getApiHook":"6o6Zk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iDKH6":[function() {},{}],"75ze5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../style/pages/style.admin.css":"iDKH6","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","../utils/getApiHook":"6o6Zk","../components/search":"7LAev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iDKH6":[function() {},{}],"7LAev":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$da2d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$da2d.prelude(module);
+
+try {
+// Trong Search.js
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function Search() {
+    _s();
+    (0, _react.useEffect)(()=>{
+        const handleSearch = ()=>{
+            const input = document.getElementById("myInput");
+            const filter = input.value.toLowerCase();
+            const rows = document.querySelectorAll("#myTable tr");
+            rows.forEach(function(row) {
+                const text = row.textContent.toLowerCase();
+                if (text.indexOf(filter) > -1) row.style.display = "";
+                else row.style.display = "none";
+            });
+        };
+        document.getElementById("myInput").addEventListener("keyup", handleSearch);
+    }, []);
+    return null;
+}
+_s(Search, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = Search;
+exports.default = Search;
+var _c;
+$RefreshReg$(_c, "Search");
+
+  $parcel$ReactRefreshHelpers$da2d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"75ze5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f18d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f18d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _productAdmin = require("./productAdmin");
+var _productAdminDefault = parcelHelpers.interopDefault(_productAdmin);
+var _s = $RefreshSig$();
+function HandleProduct() {
+    _s();
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+        class: "btn btn-primary newUser ",
+        "data-bs-toggle": "modal",
+        "data-bs-target": "#userForm",
+        children: [
+            "Add User",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                class: "bi bi-people"
+            }, void 0, false, {
+                fileName: "src/pages/handleProduct.js",
+                lineNumber: 4,
+                columnNumber: 104
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/handleProduct.js",
+        lineNumber: 4,
+        columnNumber: 5
+    }, this);
+    const handleProduct = ()=>{
+        var form = document.getElementById("myForm"), imgInput = document.querySelector(".img"), file = document.getElementById("imgInput"), userName = document.getElementById("name"), age = document.getElementById("age"), email = document.getElementById("email"), phone = document.getElementById("phone"), sDate = document.getElementById("sDate"), submitBtn = document.querySelector(".submit"), userInfo = document.getElementById("data"), modal = document.getElementById("userForm"), modalTitle = document.querySelector("#userForm .modal-title"), newUserBtn = document.querySelector(".newUser"), getData = localStorage.getItem("userProfile") ? JSON.parse(localStorage.getItem("userProfile")) : [], isEdit = false, editId;
+        // showInfo();
+        newUserBtn.addEventListener("click", ()=>{
+            submitBtn.innerText = "Submit";
+            modalTitle.innerText = "Fill the Form";
+            isEdit = false;
+            imgInput.src = "./image/Profile Icon.webp";
+            form.reset();
+        });
+        file.onchange = function() {
+            if (file.files[0].size < 1000000) {
+                var fileReader = new FileReader();
+                fileReader.onload = function(e) {
+                    imgUrl = e.target.result;
+                    imgInput.src = imgUrl;
+                };
+                fileReader.readAsDataURL(file.files[0]);
+            } else alert("This file is too large!");
+        };
+    };
+    (0, _react.useEffect)(()=>{
+        document.querySelector(".newUser").addEventListener("click", handleProduct);
+    }, []);
+    // Trả về null hoặc một phần tử JSX nếu cần
+    return null;
+}
+_s(HandleProduct, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_c = HandleProduct;
+exports.default = HandleProduct;
+var _c;
+$RefreshReg$(_c, "HandleProduct");
+
+  $parcel$ReactRefreshHelpers$f18d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./productAdmin":"6piCr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6piCr":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4915 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4915.prelude(module);
+
+try {
+// Trong ProductAdmin.js
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _headerAdmin = require("../components/header.admin");
+var _headerAdminDefault = parcelHelpers.interopDefault(_headerAdmin);
+var _slidebarAdmin = require("../components/slidebar.admin");
+var _slidebarAdminDefault = parcelHelpers.interopDefault(_slidebarAdmin);
+var _apiService = require("../services/apiService");
+var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
+var _apiRoute = require("../utils/apiRoute");
+var _getApiHook = require("../utils/getApiHook");
+var _getApiHookDefault = parcelHelpers.interopDefault(_getApiHook);
+var _search = require("../components/search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
+var _handleProduct = require("./handleProduct");
+var _handleProductDefault = parcelHelpers.interopDefault(_handleProduct);
+var _styleAdminCss = require("../style/pages/style.admin.css");
+var _profileFormJpg = require("../assets/images/profile-form.jpg");
+var _s = $RefreshSig$();
+function ProductAdmin() {
+    _s();
+    const [products, setProducts] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        (0, _getApiHookDefault.default)(setProducts, (0, _apiRoute.API_ENDPOINTS).PRODUCT.BASE);
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "grid-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
+                fileName: "src/pages/productAdmin.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
+                fileName: "src/pages/productAdmin.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "container mt-3 text-center adminProduct-content",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "main-title",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            style: {
+                                color: "aliceblue"
+                            },
+                            children: "S\u1EA2N PH\u1EA8M"
+                        }, void 0, false, {
+                            fileName: "src/pages/productAdmin.js",
+                            lineNumber: 26,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/pages/productAdmin.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "input-btn mt-3",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                className: "form-control",
+                                id: "myInput",
+                                type: "text",
+                                placeholder: "Search.."
+                            }, void 0, false, {
+                                fileName: "src/pages/productAdmin.js",
+                                lineNumber: 29,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                class: "btn btn-primary text-white newUser ",
+                                "data-bs-toggle": "modal",
+                                "data-bs-target": "#userForm",
+                                children: [
+                                    "Add User",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "bi bi-people"
+                                    }, void 0, false, {
+                                        fileName: "src/pages/productAdmin.js",
+                                        lineNumber: 30,
+                                        columnNumber: 121
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/productAdmin.js",
+                                lineNumber: 30,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/productAdmin.js",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/pages/productAdmin.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        class: "modal fade",
+                        id: "userForm",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            class: "modal-dialog modal-dialog-centered modal-lg",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                class: "modal-content",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        class: "modal-header",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                                class: "modal-title",
+                                                children: "Fill the Form"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 38,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                type: "button",
+                                                class: "btn-close",
+                                                "data-bs-dismiss": "modal",
+                                                "aria-label": "Close"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 39,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/productAdmin.js",
+                                        lineNumber: 37,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        class: "modal-body",
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                                            action: "#",
+                                            id: "myForm",
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    class: "card imgholder",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                            for: "imgInput",
+                                                            class: "upload",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "file",
+                                                                    name: "",
+                                                                    id: "imgInput"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 48,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                                    class: "bi bi-plus-circle-dotted"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 49,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 47,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                            src: (0, _profileFormJpg.imgForm),
+                                                            alt: "",
+                                                            width: "100",
+                                                            height: "100",
+                                                            class: "img"
+                                                        }, void 0, false, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 51,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/pages/productAdmin.js",
+                                                    lineNumber: 46,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                    class: "inputField",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                    for: "name",
+                                                                    children: "T\xean"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 56,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "text",
+                                                                    name: "",
+                                                                    id: "name",
+                                                                    required: true
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 57,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 55,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                    for: "age",
+                                                                    children: "Tu\u1ED5i:"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 60,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "number",
+                                                                    name: "",
+                                                                    id: "age",
+                                                                    required: true
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 61,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 59,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                    for: "city",
+                                                                    children: "Gi\u1EDBi t\xednh:"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 64,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "text",
+                                                                    name: "",
+                                                                    id: "gender",
+                                                                    required: true
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 65,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 63,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                    for: "color",
+                                                                    children: "M\xe0u:"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 68,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "text",
+                                                                    name: "",
+                                                                    id: "color",
+                                                                    required: true
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 69,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 67,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                    for: "status",
+                                                                    children: "Tr\u1EA1ng th\xe1i:"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 72,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "text",
+                                                                    name: "",
+                                                                    id: "status",
+                                                                    required: true
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 73,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 71,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                    for: "origin",
+                                                                    children: "Xu\u1EA5t x\u1EE9:"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 76,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "text",
+                                                                    name: "",
+                                                                    id: "origin",
+                                                                    required: true
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 77,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 75,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                                                    for: "descrpition",
+                                                                    children: "M\xf4 t\u1EA3:"
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 80,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                                                    type: "text",
+                                                                    name: "",
+                                                                    id: "descrpition",
+                                                                    required: true
+                                                                }, void 0, false, {
+                                                                    fileName: "src/pages/productAdmin.js",
+                                                                    lineNumber: 81,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "src/pages/productAdmin.js",
+                                                            lineNumber: 79,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "src/pages/productAdmin.js",
+                                                    lineNumber: 54,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 44,
+                                            columnNumber: 17
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/pages/productAdmin.js",
+                                        lineNumber: 42,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        class: "modal-footer",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                type: "button",
+                                                class: "btn btn-secondary",
+                                                "data-bs-dismiss": "modal",
+                                                children: "Close"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 88,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                type: "submit",
+                                                form: "myForm",
+                                                class: "btn btn-primary submit",
+                                                children: "Submit"
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 89,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/pages/productAdmin.js",
+                                        lineNumber: 87,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/pages/productAdmin.js",
+                                lineNumber: 36,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "src/pages/productAdmin.js",
+                            lineNumber: 35,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/pages/productAdmin.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
+                        className: "table table-bordered table-product",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "T\xean s\u1EA3n ph\u1EA9m"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 97,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "H\xecnh \u1EA3nh"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 98,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Gi\xe1 ti\u1EC1n"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 99,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Xu\u1EA5t x\u1EE9"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 100,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "M\xe0u"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 101,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Tr\u1EA1ng th\xe1i"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 102,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "M\xf4 t\u1EA3"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 103,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
+                                            children: "Ch\u1EE9c n\u0103ng"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/productAdmin.js",
+                                            lineNumber: 104,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/productAdmin.js",
+                                    lineNumber: 96,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "src/pages/productAdmin.js",
+                                lineNumber: 95,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
+                                id: "myTable",
+                                children: products.map((product)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                        className: "list-product",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: product.name
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 110,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                                    src: product.images[0],
+                                                    alt: ""
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/productAdmin.js",
+                                                    lineNumber: 111,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 111,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: [
+                                                    product.price,
+                                                    " VND"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 112,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: product.origin
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 113,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: product.color
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 114,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: product.status
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 115,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                className: "table-decreption",
+                                                children: product.description
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 116,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                id: "descriptionPopup",
+                                                className: " hidden",
+                                                children: product.description
+                                            }, void 0, false, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 117,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                        className: "btn-handle",
+                                                        children: "S\u1EEDa"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/productAdmin.js",
+                                                        lineNumber: 119,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                        className: "btn-handle",
+                                                        id: "deleteProduct",
+                                                        children: "X\xf3a"
+                                                    }, void 0, false, {
+                                                        fileName: "src/pages/productAdmin.js",
+                                                        lineNumber: 120,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "src/pages/productAdmin.js",
+                                                lineNumber: 118,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, product.id, true, {
+                                        fileName: "src/pages/productAdmin.js",
+                                        lineNumber: 109,
+                                        columnNumber: 15
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "src/pages/productAdmin.js",
+                                lineNumber: 107,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/productAdmin.js",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/productAdmin.js",
+                lineNumber: 24,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _handleProductDefault.default), {}, void 0, false, {
+                fileName: "src/pages/productAdmin.js",
+                lineNumber: 127,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
+                fileName: "src/pages/productAdmin.js",
+                lineNumber: 128,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/productAdmin.js",
+        lineNumber: 21,
+        columnNumber: 5
+    }, this);
+}
+_s(ProductAdmin, "f86L6rLANGURv6GE6gupp7+oOp4=");
+_c = ProductAdmin;
+exports.default = ProductAdmin;
+var _c;
+$RefreshReg$(_c, "ProductAdmin");
+
+  $parcel$ReactRefreshHelpers$4915.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","../utils/getApiHook":"6o6Zk","../components/search":"7LAev","./handleProduct":"75ze5","../style/pages/style.admin.css":"iDKH6","../assets/images/profile-form.jpg":"by8xb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iDKH6":[function() {},{}],"by8xb":[function(require,module,exports) {
+module.exports = require("dd278863f935918a").getBundleURL("bLxZJ") + "profile-form.5d743072.jpg" + "?" + Date.now();
+
+},{"dd278863f935918a":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
 
 },{}],"1cCLT":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6a15 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -48440,8 +49331,10 @@ function Login() {
             });
             setLoading(false);
             const { access_token } = response.data;
-            if (access_token) // alert("Login successfully");
-            history.push("/");
+            if (access_token) {
+                (0, _apiService.setAuthToken)(access_token);
+                history.push("/home");
+            }
         } catch (error) {
             console.log(error);
             setLoading(false);
@@ -48465,14 +49358,14 @@ function Login() {
                                     className: "fas fa-lock"
                                 }, void 0, false, {
                                     fileName: "src/loginAdmin.js",
-                                    lineNumber: 59,
+                                    lineNumber: 61,
                                     columnNumber: 17
                                 }, this),
                                 " \u0110\u0103ng nh\u1EADp"
                             ]
                         }, void 0, true, {
                             fileName: "src/loginAdmin.js",
-                            lineNumber: 58,
+                            lineNumber: 60,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -48485,7 +49378,7 @@ function Login() {
                             required: true
                         }, void 0, false, {
                             fileName: "src/loginAdmin.js",
-                            lineNumber: 61,
+                            lineNumber: 63,
                             columnNumber: 15
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -48497,7 +49390,7 @@ function Login() {
                             required: true
                         }, void 0, false, {
                             fileName: "src/loginAdmin.js",
-                            lineNumber: 70,
+                            lineNumber: 72,
                             columnNumber: 15
                         }, this),
                         err && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -48506,12 +49399,12 @@ function Login() {
                                 children: err
                             }, void 0, false, {
                                 fileName: "src/loginAdmin.js",
-                                lineNumber: 80,
+                                lineNumber: 82,
                                 columnNumber: 19
                             }, this)
                         }, void 0, false, {
                             fileName: "src/loginAdmin.js",
-                            lineNumber: 79,
+                            lineNumber: 81,
                             columnNumber: 17
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -48522,28 +49415,28 @@ function Login() {
                             children: loading ? "Loading..." : "\u0110\u0103ng nh\u1EADp"
                         }, void 0, false, {
                             fileName: "src/loginAdmin.js",
-                            lineNumber: 83,
+                            lineNumber: 85,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/loginAdmin.js",
-                    lineNumber: 57,
+                    lineNumber: 59,
                     columnNumber: 13
                 }, this)
             }, void 0, false, {
                 fileName: "src/loginAdmin.js",
-                lineNumber: 56,
+                lineNumber: 58,
                 columnNumber: 11
             }, this)
         }, void 0, false, {
             fileName: "src/loginAdmin.js",
-            lineNumber: 55,
+            lineNumber: 57,
             columnNumber: 9
         }, this)
     }, void 0, false, {
         fileName: "src/loginAdmin.js",
-        lineNumber: 54,
+        lineNumber: 56,
         columnNumber: 7
     }, this);
 }
@@ -48921,335 +49814,7 @@ exports.HashRouter = HashRouter;
 exports.Link = Link;
 exports.NavLink = NavLink;
 
-},{"da62b6babbdecc2c":"dvHa0","5e324568bba15c00":"21dqq","3c9028f6e360e392":"6yWeD","66d1405b8ea702f8":"7wKI2","ce94166730e7a36":"82vrW","b252b358713d5c2":"fnIPv"}],"6piCr":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4915 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4915.prelude(module);
-
-try {
-// Trong ProductAdmin.js
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _headerAdmin = require("../components/header.admin");
-var _headerAdminDefault = parcelHelpers.interopDefault(_headerAdmin);
-var _slidebarAdmin = require("../components/slidebar.admin");
-var _slidebarAdminDefault = parcelHelpers.interopDefault(_slidebarAdmin);
-var _search = require("../components/search"); // Đảm bảo đường dẫn đúng
-var _searchDefault = parcelHelpers.interopDefault(_search);
-var _apiService = require("../services/apiService");
-var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
-var _apiRoute = require("../utils/apiRoute");
-var _getApiHook = require("../utils/getApiHook");
-var _getApiHookDefault = parcelHelpers.interopDefault(_getApiHook);
-var _handleProduct = require("./handleProduct");
-var _handleProductDefault = parcelHelpers.interopDefault(_handleProduct);
-var _s = $RefreshSig$();
-function ProductAdmin() {
-    _s();
-    const [product, setProduct] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        (0, _getApiHookDefault.default)(setProduct, (0, _apiRoute.API_ENDPOINTS).PRODUCT.BASE);
-    }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "grid-container",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
-                fileName: "src/pages/productAdmin.js",
-                lineNumber: 20,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
-                fileName: "src/pages/productAdmin.js",
-                lineNumber: 21,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "container mt-3 text-center adminProduct-content",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "main-title",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            style: {
-                                color: "aliceblue"
-                            },
-                            children: "S\u1EA2N PH\u1EA8M"
-                        }, void 0, false, {
-                            fileName: "src/pages/productAdmin.js",
-                            lineNumber: 24,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "src/pages/productAdmin.js",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "input-btn mt-3",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                className: "form-control",
-                                id: "myInput",
-                                type: "text",
-                                placeholder: "Search.."
-                            }, void 0, false, {
-                                fileName: "src/pages/productAdmin.js",
-                                lineNumber: 27,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "add-product bg-white text-center ",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    children: "Th\xeam s\u1EA3n ph\u1EA9m"
-                                }, void 0, false, {
-                                    fileName: "src/pages/productAdmin.js",
-                                    lineNumber: 29,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/pages/productAdmin.js",
-                                lineNumber: 28,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/productAdmin.js",
-                        lineNumber: 26,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                        fileName: "src/pages/productAdmin.js",
-                        lineNumber: 32,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
-                        className: "table table-bordered table-product",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "T\xean s\u1EA3n ph\u1EA9m"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 36,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "H\xecnh \u1EA3nh"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 37,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "Gi\xe1 ti\u1EC1n"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 38,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "Xu\u1EA5t x\u1EE9"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 39,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "M\xf4 t\u1EA3"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 40,
-                                            columnNumber: 15
-                                        }, this),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
-                                            children: "Ch\u1EE9c n\u0103ng"
-                                        }, void 0, false, {
-                                            fileName: "src/pages/productAdmin.js",
-                                            lineNumber: 41,
-                                            columnNumber: 15
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/pages/productAdmin.js",
-                                    lineNumber: 35,
-                                    columnNumber: 13
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/pages/productAdmin.js",
-                                lineNumber: 34,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
-                                id: "myTable",
-                                children: product.map((product)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                        className: "list-product",
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: product.name
-                                            }, void 0, false, {
-                                                fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 47,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                    src: product.images[0],
-                                                    alt: ""
-                                                }, void 0, false, {
-                                                    fileName: "src/pages/productAdmin.js",
-                                                    lineNumber: 48,
-                                                    columnNumber: 21
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 48,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: [
-                                                    product.price,
-                                                    " VND"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 49,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: product.origin
-                                            }, void 0, false, {
-                                                fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 50,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: product.description
-                                            }, void 0, false, {
-                                                fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 51,
-                                                columnNumber: 17
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        onClick: ()=>(0, _handleProductDefault.default)(product.id),
-                                                        children: "S\u1EEDa"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/productAdmin.js",
-                                                        lineNumber: 53,
-                                                        columnNumber: 19
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        id: `deleteProduct${product.id}`,
-                                                        onClick: ()=>handleDelete(product.id),
-                                                        children: "X\xf3a"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/productAdmin.js",
-                                                        lineNumber: 54,
-                                                        columnNumber: 19
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/pages/productAdmin.js",
-                                                lineNumber: 52,
-                                                columnNumber: 17
-                                            }, this)
-                                        ]
-                                    }, product.id, true, {
-                                        fileName: "src/pages/productAdmin.js",
-                                        lineNumber: 46,
-                                        columnNumber: 15
-                                    }, this))
-                            }, void 0, false, {
-                                fileName: "src/pages/productAdmin.js",
-                                lineNumber: 44,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/pages/productAdmin.js",
-                        lineNumber: 33,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/pages/productAdmin.js",
-                lineNumber: 22,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
-                fileName: "src/pages/productAdmin.js",
-                lineNumber: 61,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/pages/productAdmin.js",
-        lineNumber: 19,
-        columnNumber: 5
-    }, this);
-}
-_s(ProductAdmin, "DwAZUasqmv76dZQcUVyN5saSLPo=");
-_c = ProductAdmin;
-exports.default = ProductAdmin;
-var _c;
-$RefreshReg$(_c, "ProductAdmin");
-
-  $parcel$ReactRefreshHelpers$4915.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","../utils/getApiHook":"6o6Zk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./handleProduct":"75ze5","../components/search":"7LAev"}],"7LAev":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$da2d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$da2d.prelude(module);
-
-try {
-// Trong Search.js
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _s = $RefreshSig$();
-function Search() {
-    _s();
-    (0, _react.useEffect)(()=>{
-        const handleSearch = ()=>{
-            const input = document.getElementById("myInput");
-            const filter = input.value.toLowerCase();
-            const rows = document.querySelectorAll("#myTable tr");
-            rows.forEach(function(row) {
-                const text = row.textContent.toLowerCase();
-                if (text.indexOf(filter) > -1) row.style.display = "";
-                else row.style.display = "none";
-            });
-        };
-        document.getElementById("myInput").addEventListener("keyup", handleSearch);
-        return ()=>{
-            document.getElementById("myInput").removeEventListener("keyup", handleSearch);
-        };
-    }, []);
-    return null;
-}
-_s(Search, "OD7bBpZva5O2jO+Puf00hKivP7c=");
-_c = Search;
-exports.default = Search;
-var _c;
-$RefreshReg$(_c, "Search");
-
-  $parcel$ReactRefreshHelpers$da2d.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9n8ah":[function(require,module,exports) {
+},{"da62b6babbdecc2c":"dvHa0","5e324568bba15c00":"21dqq","3c9028f6e360e392":"6yWeD","66d1405b8ea702f8":"7wKI2","ce94166730e7a36":"82vrW","b252b358713d5c2":"fnIPv"}],"9n8ah":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$30e4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -49268,6 +49833,7 @@ function HandleHomePage() {
     const history = (0, _reactRouterDomMin.useHistory)();
     (0, _react.useEffect)(()=>{
         const token = localStorage.getItem("token");
+        print(token);
         if (token != undefined || token != null) history.push("/home");
         else history.push("/login");
     }, []);
@@ -49312,37 +49878,35 @@ var _styleAdminCss = require("../style/pages/style.admin.css");
 var _apiService = require("../services/apiService");
 var _apiServiceDefault = parcelHelpers.interopDefault(_apiService);
 var _apiRoute = require("../utils/apiRoute");
+var _getApiHook = require("../utils/getApiHook");
+var _getApiHookDefault = parcelHelpers.interopDefault(_getApiHook);
 var _search = require("../components/search");
 var _searchDefault = parcelHelpers.interopDefault(_search);
 var _s = $RefreshSig$();
 function categoryAdmin() {
     _s();
-    const [category, setCategory] = (0, _react.useState)([]);
+    const [categorys, setCategory] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
-        const getCategoryData = async ()=>{
-            const response = await (0, _apiServiceDefault.default).get((0, _apiRoute.API_ENDPOINTS).CATEGORY.BASE);
-            if (response.status >= 200 && response.status <= 299) setCategory(response.data);
-        };
-        getCategoryData();
+        (0, _getApiHookDefault.default)(setCategory, (0, _apiRoute.API_ENDPOINTS).CATEGORY.BASE);
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        class: "grid-container",
+        className: "grid-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/categoryAdmin.js",
-                lineNumber: 28,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/categoryAdmin.js",
-                lineNumber: 29,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "container mt-3 text-center",
+                className: "container mt-3 text-center",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "main-title",
+                        className: "main-title",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                             style: {
                                 color: "aliceblue"
@@ -49350,54 +49914,54 @@ function categoryAdmin() {
                             children: "DANH M\u1EE4C"
                         }, void 0, false, {
                             fileName: "src/pages/categoryAdmin.js",
-                            lineNumber: 32,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 31,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "input-btn mt-3",
+                        className: "input-btn mt-3",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                class: "form-control",
+                                className: "form-control",
                                 id: "myInput",
                                 type: "text",
                                 placeholder: "Search.."
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 35,
+                                lineNumber: 25,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                class: "add-product bg-white text-center ",
+                                className: "add-product bg-white text-center",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                     children: "Th\xeam danh m\u1EE5c"
                                 }, void 0, false, {
                                     fileName: "src/pages/categoryAdmin.js",
-                                    lineNumber: 37,
+                                    lineNumber: 27,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 36,
+                                lineNumber: 26,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 34,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 40,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
-                        class: "table table-bordered table-product ",
+                        className: "table table-bordered table-product",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("thead", {
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
@@ -49406,96 +49970,99 @@ function categoryAdmin() {
                                             children: "T\xean danh m\u1EE5c"
                                         }, void 0, false, {
                                             fileName: "src/pages/categoryAdmin.js",
-                                            lineNumber: 44,
+                                            lineNumber: 34,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Ch\u1EE9c n\u0103ng"
                                         }, void 0, false, {
                                             fileName: "src/pages/categoryAdmin.js",
-                                            lineNumber: 45,
+                                            lineNumber: 35,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/categoryAdmin.js",
-                                    lineNumber: 43,
+                                    lineNumber: 33,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 42,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
                                 id: "myTable",
-                                children: category.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                children: categorys.map((category)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
                                         children: [
+                                            " ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: category.name
                                             }, void 0, false, {
                                                 fileName: "src/pages/categoryAdmin.js",
-                                                lineNumber: 51,
+                                                lineNumber: 41,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
                                                 children: [
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                        className: "btn-handle",
                                                         children: "S\u1EEDa"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/categoryAdmin.js",
-                                                        lineNumber: 53,
+                                                        lineNumber: 43,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                        className: "btn-handle",
                                                         children: "X\xf3a"
                                                     }, void 0, false, {
                                                         fileName: "src/pages/categoryAdmin.js",
-                                                        lineNumber: 54,
+                                                        lineNumber: 44,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/pages/categoryAdmin.js",
-                                                lineNumber: 52,
+                                                lineNumber: 42,
                                                 columnNumber: 17
                                             }, this)
                                         ]
-                                    }, void 0, true, {
+                                    }, category.id, true, {
                                         fileName: "src/pages/categoryAdmin.js",
-                                        lineNumber: 50,
+                                        lineNumber: 40,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "src/pages/categoryAdmin.js",
-                                lineNumber: 48,
+                                lineNumber: 38,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 41,
+                        lineNumber: 31,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
                         fileName: "src/pages/categoryAdmin.js",
-                        lineNumber: 60,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/categoryAdmin.js",
-                lineNumber: 30,
+                lineNumber: 20,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/pages/categoryAdmin.js",
-        lineNumber: 27,
+        lineNumber: 17,
         columnNumber: 5
     }, this);
 }
-_s(categoryAdmin, "a0Gkw7L/pIBVFZ2SGhI61pCkZ9s=");
+_s(categoryAdmin, "cHQIhaH7gOt0wzuDI//6uAOMguw=");
 exports.default = categoryAdmin;
 
   $parcel$ReactRefreshHelpers$27cc.postlude(module);
@@ -49503,7 +50070,7 @@ exports.default = categoryAdmin;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../style/pages/style.admin.css":"iDKH6","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../components/search":"7LAev"}],"iDKH6":[function() {},{}],"dbsSA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../style/pages/style.admin.css":"iDKH6","../services/apiService":"80dWz","../utils/apiRoute":"8hJX0","../utils/getApiHook":"6o6Zk","../components/search":"7LAev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iDKH6":[function() {},{}],"dbsSA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$89f6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -49519,18 +50086,20 @@ var _headerAdmin = require("../components/header.admin");
 var _headerAdminDefault = parcelHelpers.interopDefault(_headerAdmin);
 var _slidebarAdmin = require("../components/slidebar.admin");
 var _slidebarAdminDefault = parcelHelpers.interopDefault(_slidebarAdmin);
+var _search = require("../components/search");
+var _searchDefault = parcelHelpers.interopDefault(_search);
 function feedback() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         class: "grid-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/feedbackAdmin.js",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _slidebarAdminDefault.default), {}, void 0, false, {
                 fileName: "src/pages/feedbackAdmin.js",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -49545,12 +50114,12 @@ function feedback() {
                             children: "B\xccNH LU\u1EACN"
                         }, void 0, false, {
                             fileName: "src/pages/feedbackAdmin.js",
-                            lineNumber: 11,
+                            lineNumber: 12,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "src/pages/feedbackAdmin.js",
-                        lineNumber: 10,
+                        lineNumber: 11,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -49563,7 +50132,7 @@ function feedback() {
                                 placeholder: "Search.."
                             }, void 0, false, {
                                 fileName: "src/pages/feedbackAdmin.js",
-                                lineNumber: 14,
+                                lineNumber: 15,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -49572,23 +50141,23 @@ function feedback() {
                                     children: "Th\xeam s\u1EA3n ph\u1EA9m"
                                 }, void 0, false, {
                                     fileName: "src/pages/feedbackAdmin.js",
-                                    lineNumber: 16,
+                                    lineNumber: 17,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/feedbackAdmin.js",
-                                lineNumber: 15,
+                                lineNumber: 16,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/feedbackAdmin.js",
-                        lineNumber: 13,
+                        lineNumber: 14,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/pages/feedbackAdmin.js",
-                        lineNumber: 19,
+                        lineNumber: 20,
                         columnNumber: 7
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("table", {
@@ -49601,219 +50170,122 @@ function feedback() {
                                             children: "T\xean ng\u01B0\u1EDDi d\xf9ng"
                                         }, void 0, false, {
                                             fileName: "src/pages/feedbackAdmin.js",
-                                            lineNumber: 23,
+                                            lineNumber: 24,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Email"
                                         }, void 0, false, {
                                             fileName: "src/pages/feedbackAdmin.js",
-                                            lineNumber: 24,
+                                            lineNumber: 25,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "N\u1ED9i dung"
                                         }, void 0, false, {
                                             fileName: "src/pages/feedbackAdmin.js",
-                                            lineNumber: 25,
+                                            lineNumber: 26,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("th", {
                                             children: "Ch\u1EE9c n\u0103ng"
                                         }, void 0, false, {
                                             fileName: "src/pages/feedbackAdmin.js",
-                                            lineNumber: 26,
+                                            lineNumber: 27,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/pages/feedbackAdmin.js",
-                                    lineNumber: 22,
+                                    lineNumber: 23,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/pages/feedbackAdmin.js",
-                                lineNumber: 21,
+                                lineNumber: 22,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tbody", {
                                 id: "myTable",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "Tr\u01B0\u01A1ng C\xf4ng Non"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 31,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "nontruong@gmail.com"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 32,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "m\xe8o \u0111\u1EB9p qu\xe1"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 33,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        children: "S\u1EEDa"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/feedbackAdmin.js",
-                                                        lineNumber: 35,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        children: "X\xf3a"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/feedbackAdmin.js",
-                                                        lineNumber: 36,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 34,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/pages/feedbackAdmin.js",
-                                        lineNumber: 30,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "Tr\u01B0\u01A1ng C\xf4ng Non"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 40,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "nontruong@gmail.com"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 41,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "m\xe8o \u0111\u1EB9p qu\xe1"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 42,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        children: "S\u1EEDa"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/feedbackAdmin.js",
-                                                        lineNumber: 44,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        children: "X\xf3a"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/feedbackAdmin.js",
-                                                        lineNumber: 45,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 43,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/pages/feedbackAdmin.js",
-                                        lineNumber: 39,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
-                                        children: [
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "Tr\u01B0\u01A1ng C\xf4ng Non"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 49,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "nontruong@gmail.com"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 50,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: "m\xe8o \u0111\u1EB9p qu\xe1"
-                                            }, void 0, false, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 51,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        children: "S\u1EEDa"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/feedbackAdmin.js",
-                                                        lineNumber: 53,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                                        children: "X\xf3a"
-                                                    }, void 0, false, {
-                                                        fileName: "src/pages/feedbackAdmin.js",
-                                                        lineNumber: 54,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "src/pages/feedbackAdmin.js",
-                                                lineNumber: 52,
-                                                columnNumber: 15
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/pages/feedbackAdmin.js",
-                                        lineNumber: 48,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("tr", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            children: "Tr\u01B0\u01A1ng C\xf4ng Non"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/feedbackAdmin.js",
+                                            lineNumber: 32,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            children: "nontruong@gmail.com"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/feedbackAdmin.js",
+                                            lineNumber: 33,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            children: "m\xe8o \u0111\u1EB9p qu\xe1"
+                                        }, void 0, false, {
+                                            fileName: "src/pages/feedbackAdmin.js",
+                                            lineNumber: 34,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("td", {
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                    className: "btn-handle",
+                                                    children: "S\u1EEDa"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/feedbackAdmin.js",
+                                                    lineNumber: 36,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                    className: "btn-handle",
+                                                    children: "X\xf3a"
+                                                }, void 0, false, {
+                                                    fileName: "src/pages/feedbackAdmin.js",
+                                                    lineNumber: 37,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/pages/feedbackAdmin.js",
+                                            lineNumber: 35,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/pages/feedbackAdmin.js",
+                                    lineNumber: 31,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "src/pages/feedbackAdmin.js",
-                                lineNumber: 29,
+                                lineNumber: 30,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/pages/feedbackAdmin.js",
-                        lineNumber: 20,
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _searchDefault.default), {}, void 0, false, {
+                        fileName: "src/pages/feedbackAdmin.js",
+                        lineNumber: 42,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/feedbackAdmin.js",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 5
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/pages/feedbackAdmin.js",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 }
@@ -49824,6 +50296,49 @@ exports.default = feedback;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire716c")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/header.admin":"2EkiD","../components/slidebar.admin":"bMcQQ","../components/search":"7LAev","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"h9my2":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5878 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5878.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDomMin = require("react-router-dom/cjs/react-router-dom.min");
+var _s = $RefreshSig$();
+function HandleLogout() {
+    _s();
+    const history = (0, _reactRouterDomMin.useHistory)();
+    (0, _react.useEffect)(()=>{
+        const token = localStorage.removeItem("token");
+        print(token);
+        if (token == undefined || token == null) history.push("/");
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+        fileName: "src/pages/handleLogout.js",
+        lineNumber: 12,
+        columnNumber: 12
+    }, this);
+}
+_s(HandleLogout, "bz2N+u0mX89LO9zOCfVCA9Sa20M=", false, function() {
+    return [
+        (0, _reactRouterDomMin.useHistory)
+    ];
+});
+_c = HandleLogout;
+exports.default = HandleLogout;
+var _c;
+$RefreshReg$(_c, "HandleLogout");
+
+  $parcel$ReactRefreshHelpers$5878.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom/cjs/react-router-dom.min":"4Y83O","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["farZc","1xC6H","8lqZg"], "8lqZg", "parcelRequire716c")
 
 //# sourceMappingURL=index.975ef6c8.js.map
