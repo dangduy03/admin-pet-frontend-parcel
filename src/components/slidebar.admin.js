@@ -2,20 +2,35 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../style/pages/style.admin.css"
+import RemoveAccount from "./logout.admin";
 function SlidebarAdmin() {
-  const history  = useHistory();
-  useEffect(() => {
-    const logout = document.getElementById("logout-item");
-    const handleLogout = () => {
-      alert('aabvd');
-      localStorage.removeItem("token");
-      history.push('/home');
-    };
-    
-    if (logout) {
-      logout.addEventListener("click", handleLogout);
-    }
-  }, [history]);
+
+  const Sidebar = () => {
+    const history = useHistory();
+
+    useEffect(() => {
+        const handleLogout = () => {
+            alert('aabvd');
+            localStorage.removeItem("token");
+            history.push('/home');
+        };
+
+        const logoutItem = document.getElementById("logout-item");
+        if (logoutItem) {
+            logoutItem.addEventListener("click", handleLogout);
+        } else {
+            console.error("Element with ID 'logout-item' not found.");
+        }
+
+        // Cleanup function to remove the event listener
+        return () => {
+            if (logoutItem) {
+                logoutItem.removeEventListener("click", handleLogout);
+            }
+        };
+    }, [history]);
+
+  };
 
   return (
       <aside id="sidebar">
@@ -52,22 +67,19 @@ function SlidebarAdmin() {
           </li>
           <li class="sidebar-list-item">
             <a href="./src/pages/userAdmin.html">
-             
             </a>
-            <span class="material-icons-outlined">fact_check</span>
+            <span class="material-icons-outlined"> admin_panel_settings</span>
             <Link to="/accountUser">  Người dùng</Link>
           </li>
 
           <li class="sidebar-list-item">
-            <a href="#">
-              <span class="material-icons-outlined">settings</span> Cài đặt
-            </a>
+              <span class="material-icons-outlined">fact_check</span> 
+            <Link to="/bill">Hóa đơn</Link>
           </li>
-          <li class="sidebar-list-item">
-              <span id="logout-item" class="material-icons-outlined">logout</span> Đăng xuất
-          </li>
+        <RemoveAccount/>
         </ul>
       </aside>
   )
 }
+
 export default SlidebarAdmin;

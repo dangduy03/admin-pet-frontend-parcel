@@ -11,9 +11,13 @@ import handleProduct from "./handleProduct";
 import accountUser from "./userAdmin";
 
 function homePageAdmin() {
+  
   const [product, setProduct] = useState([]);
   const [category, setCategory] = useState([])
   const [accountUser, setAccountUser] = useState([])
+
+
+
 
   useEffect(() => {
     const Data = async () => {
@@ -26,6 +30,16 @@ function homePageAdmin() {
 
     Data();
   }, []);
+  
+  const filteredCategorys = category.reduce((acc, category) => {
+    if (
+      !acc.some((item) => item.type === category.type) &&
+      (category.type === "DOG" || category.type === "CAT")
+    ) {
+      acc.push(category);
+    }
+    return acc;
+  }, []);
 
   return (
     <div class="grid-container">
@@ -33,7 +47,7 @@ function homePageAdmin() {
       <SlidebarAdmin />
       <main class="main-container">
         <div class="main-title">
-          <h2>TRANG CHỦ</h2>
+          <h2 className="title-homepage">TRANG CHỦ</h2>
         </div>
 
         <div class="main-cards">
@@ -50,7 +64,7 @@ function homePageAdmin() {
               <p>DANH MỤC</p>
               <span class="material-icons-outlined">category</span>
             </div>
-            <p>{category.length}</p>
+            <p>{filteredCategorys.length}</p>
           </div>
 
           <div class="card">

@@ -8,14 +8,63 @@ import getApiHooks from "../utils/getApiHook";
 import Search from "../components/search";
 import HandleProduct from "./handleProduct";
 import "../style/pages/style.admin.css"
-import {imgForm} from"../assets/images/profile-form.jpg"
+import { imgForm } from "../assets/images/profile-form.jpg"
+import postApiHook from "../utils/postApiHook";
+import putApiHook from "../utils/putApiHook";
+
 function ProductAdmin() {
 
   const [products, setProducts] = useState([]);
+  const [categorys, setCategory] = useState([])
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [price, setPrice] = useState(0);
+  const [gender, setGender] = useState('');
+  const [color, setColor] = useState('');
+  const [status, setStatus] = useState('');
+  const [origin, setOrigin] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState(null);
+  const [categoryId, setCategoryId] = useState('');
+
+
 
   useEffect(() => {
     getApiHooks(setProducts, API_ENDPOINTS.PRODUCT.BASE);
+    getApiHooks(setCategory, API_ENDPOINTS.CATEGORY.BASE);
+    putApiHook(setProducts,API_ENDPOINTS.PRODUCT.UPDATE_PRODUCT)
   }, []);
+
+  const createProduct = async (event) => {
+    event.preventDefault();
+    const data = {
+      age,
+      name,
+      gender,
+      color,
+      origin,
+      status,
+      description,
+      images: [image],
+      categoryId,
+      price
+    }
+
+
+    console.log(data);
+    await apiService.post(API_ENDPOINTS.PRODUCT.BASE, data).then((data) => {
+      alert("success");
+      const modal = document.querySelector("#userForm");
+      modal.classList.remove("show") ;
+    }).catch((error) => {
+      alert("failed");
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    })
+  }
+
+
 
   return (
     <div className="grid-container">
@@ -27,11 +76,11 @@ function ProductAdmin() {
         </div>
         <div className="input-btn mt-3">
           <input className="form-control" id="myInput" type="text" placeholder="Search.." />
-          <button class="btn btn-primary text-white newUser " data-bs-toggle="modal" data-bs-target="#userForm">Add User<i
-                        class="bi bi-people"></i></button>
+          <button class="btn btn-primary text-white newUser " data-bs-toggle="modal" data-bs-target="#userForm">Add Product<i
+            class="bi bi-people"></i></button>
         </div>
-        <br/>
-        <div class="modal fade" id="userForm">
+        <br />
+        <div class="modal fade " id="userForm">
           <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
               <div class="modal-header">
@@ -40,45 +89,50 @@ function ProductAdmin() {
               </div>
 
               <div class="modal-body">
-
-                <form action="#" id="myForm">
-
-                  <div class="card imgholder">
-                    <label for="imgInput" class="upload">
-                      <input type="file" name="" id="imgInput" />
-                      <i class="bi bi-plus-circle-dotted"></i>
-                    </label>
-                    <img src={imgForm} alt="" width="100" height="100" class="img" />
-                  </div>
-
+                <form action="#" id="myForm" onSubmit={createProduct}>
                   <div class="inputField">
                     <div>
+                      <label for="name">Hình ảnh:</label>
+                      <input type="text" name="" id="img" required autoComplete="off" onChange={(e) => { setImage(e.target.value) }} />
+                    </div>
+                    <div>
                       <label for="name">Tên</label>
-                      <input type="text" name="" id="name" required />
+                      <input type="text" name="" id="name" required autoComplete="off" onChange={(e) => { setName(e.target.value) }} />
+                    </div>
+                    <div class="form-group">
+                      <label for="sel1">Loại:</label>
+                      <select class="form-control" id="sel1" onChange={(e) => { setCategoryId(e.target.value) }}>
+                        {categorys.map((item) => (<option value={item._id} >{item.name}</option>))}``
+                      </select>
                     </div>
                     <div>
                       <label for="age">Tuổi:</label>
-                      <input type="number" name="" id="age" required />
+                      <input type="number" name="" id="age" required onChange={(e) => { setAge(e.target.value) }} autoComplete="off" />
+                    </div>
+                    <div>
+                      <label for="age">Giá tiền:</label>
+                      <input type="number" name="" id="price" required onChange={(e) => { setPrice(parseInt(e.target.value)) }} autoComplete="off" />
                     </div>
                     <div>
                       <label for="city">Giới tính:</label>
-                      <input type="text" name="" id="gender" required />
+                      <input type="text" name="" id="gender" required autoComplete="off" onChange={(e) => { setGender(e.target.value) }} />
                     </div>
                     <div>
                       <label for="color">Màu:</label>
-                      <input type="text" name="" id="color" required />
+                      <input type="text" name="" id="color" required autoComplete="off" onChange={(e) => { setColor(e.target.value) }} />
                     </div>
                     <div>
-                      <label for="status">Trạng thái:</label>
-                      <input type="text" name="" id="status" required />
+                      <label className="status">Trạng thái:</label>
+                      <input className="input-status" type="radio" name="status" id="status_available" value={"AVAILABLE"} checked={status == "AVAILABLE"} onChange={(e) => { setStatus(e.target.value) }} required />AVAILABLE
+                      <input className="input-status" type="radio" name="status" id="status_unavailable" value={"UNAVAILABLE"} checked={status == "UNAVAILABLE"} onChange={(e) => { setStatus(e.target.value) }} required />UNAVAILABLE
                     </div>
                     <div>
                       <label for="origin">Xuất xứ:</label>
-                      <input type="text" name="" id="origin"required />
+                      <input type="text" name="" id="origin" onChange={(e) => { setOrigin(e.target.value) }} required />
                     </div>
                     <div>
                       <label for="descrpition">Mô tả:</label>
-                      <input type="text" name="" id="descrpition" required />
+                      <input type="text" name="" id="descrpition" required onChange={(e) => { setDescription(e.target.value) }} autoComplete="off" />
                     </div>
                   </div>
 
@@ -90,7 +144,7 @@ function ProductAdmin() {
               </div>
             </div>
           </div>
-        </div> 
+        </div>
         <table className="table table-bordered table-product">
           <thead>
             <tr>

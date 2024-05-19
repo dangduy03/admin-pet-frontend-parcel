@@ -9,15 +9,22 @@ export const API_ENDPOINTS = {
     OTP: `${API_BASE_URL}/auth/send-otp`,
     OTP_VERIFY: `${API_BASE_URL}/auth/verified-otp`,
   },
-  PRODUCT:{
+  PRODUCT: {
     BASE: `/product`,
+    ADD_PORODUCT: `${API_BASE_URL}/Products/ProductController_create`,
+    UPDATE_PRODUCT: ` ${API_BASE_URL}/Products/ProductController_update`,
   },
-  CATEGORY:{
-BASE:`/category`
+  CATEGORY: {
+    BASE: `/category`,
+    
   },
-  USER:{
-    BASE:`/user`
+  USER: {
+    BASE: `/user`
+  },
+  BILL:{
+    BASE: `/bill`
   }
+
 };// nơi khai báo các enpoint route
 
 export default API_BASE_URL;

@@ -8,7 +8,7 @@ import HandleHomePage from "./pages/handleHomePage";
 import categoryAdmin from "./pages/categoryAdmin";
 import accountUser from "./pages/userAdmin";
 import feedback from "./pages/feedbackAdmin";
-import HandleLogout from "./pages/handleLogout";
+import billAdmin from "./pages/bill.admin";
 
 function AppAdmin() {
   return (
@@ -21,6 +21,7 @@ function AppAdmin() {
         <Route path="/category" component={categoryAdmin}/>
         <Route path="/accountUser" component={accountUser}/>
         <Route path="/feedback" component={feedback}/>
+        <Route path="/bill" component={billAdmin}/>
       </Switch>
     </div>
   );

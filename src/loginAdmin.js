@@ -38,12 +38,13 @@ import {setAuthToken} from "./services/apiService"
           username: userName,
           password,
         });
-  
+      console.log(response);
         setLoading(false);
         const { access_token } = response.data;
         if (access_token) {
-          setAuthToken(access_token)
-          history.push("/home")
+          setAuthToken(access_token);
+         
+          history.push("/home");
         }
       } catch (error) {
         console.log(error);

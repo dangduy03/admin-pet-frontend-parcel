@@ -8,11 +8,19 @@ import getApiHooks from "../utils/getApiHook";
 import Search from "../components/search";
 function categoryAdmin() {
   const [categorys, setCategory] = useState([]);
-
+  const [filter, setFilter] = useState("");
   useEffect(() => {
     getApiHooks(setCategory, API_ENDPOINTS.CATEGORY.BASE);
+  })
+  const filteredCategorys = categorys.reduce((acc, category) => {
+    if (
+      !acc.some((item) => item.type === category.type) &&
+      (category.type === "DOG" || category.type === "CAT")
+    ) {
+      acc.push(category);
+    }
+    return acc;
   }, []);
-
   return (
     <div className="grid-container">
       <HeaderAdmin />
@@ -36,9 +44,9 @@ function categoryAdmin() {
             </tr>
           </thead>
           <tbody id="myTable">
-            {categorys.map((category) => (
-              <tr key={category.id}> {/* Thêm key vào mỗi phần tử trong vòng lặp */}
-                <td>{category.name}</td>
+            {filteredCategorys.map((category) => (
+              <tr key={category.id}>
+                <td>{category.type}</td>
                 <td>
                   <button className="btn-handle">Sửa</button>
                   <button className="btn-handle">Xóa</button>
@@ -47,7 +55,7 @@ function categoryAdmin() {
             ))}
           </tbody>
         </table>
-        <Search/>
+        <Search />
       </div>
     </div>
   );
