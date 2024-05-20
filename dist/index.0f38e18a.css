@@ -151,15 +151,15 @@ body {
 }
 
 .card:nth-child(2) {
-  background-color: #ff6d00;
+  background-color: #ff6d00 !important;
 }
 
 .card:nth-child(3) {
-  background-color: #2e7d32;
+  background-color: #2e7d32 !important;
 }
 
 .card:nth-child(4) {
-  background-color: #d50000;
+  background-color: #d50000 !important;
 }
 
 .card-inner {
