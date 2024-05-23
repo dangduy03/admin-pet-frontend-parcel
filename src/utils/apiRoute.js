@@ -12,16 +12,23 @@ export const API_ENDPOINTS = {
   PRODUCT: {
     BASE: `/product`,
     ADD_PORODUCT: `${API_BASE_URL}/Products/ProductController_create`,
-    UPDATE_PRODUCT: ` ${API_BASE_URL}/Products/ProductController_update`,
+    UPDATE_PRODUCT: `${API_BASE_URL}/product`,
   },
   CATEGORY: {
     BASE: `/category`,
-    
+    ADD_CATEGORY: `${API_BASE_URL}/Categorys/CategoryController_create`,
+    UPDATE_CATEGORY: `${API_BASE_URL}/category`,
+
   },
   USER: {
-    BASE: `/user`
+    BASE: `/user`,
+    ADD_USER: `${API_BASE_URL}/user`,
+    UPDATE_USER: `${API_BASE_URL}/user`
   },
-  BILL:{
+  FEEDBACK: {
+    BASE: `/feedback`
+  },
+  BILL: {
     BASE: `/bill`
   }
 
