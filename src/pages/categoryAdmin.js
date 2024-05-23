@@ -34,36 +34,38 @@ function CategoryAdmin() {
   const createCategory = async (event) => {
     event.preventDefault();
     const data = {
-      type: name 
+      type: name
     };
-  
+
     try {
       const response = await apiService.post(API_ENDPOINTS.CATEGORY.BASE, data);
       alert("Thêm danh mục thành công");
       resetForm();
       document.getElementById("categoryForm").querySelector(".btn-close").click();
-      setCategories([...categories, response.data]); 
+      setCategories([...categories, response.data]);
+      // const categoryResponse = await apiService.get(API_ENDPOINTS.CATEGORY.BASE);
+      // setCategories(categoryResponse.data);
     } catch (error) {
       alert("Thêm danh mục thất bại");
       console.error(error);
     }
   };
-  
+
   const updateCategory = async (event) => {
     event.preventDefault();
     if (!categoryId) {
       alert("Không có danh mục nào được chọn để cập nhật.");
       return;
     }
-  
+
     const data = {
       name: name // Sử dụng name thay vì type nếu bạn lưu tên danh mục trong trường name
     };
-  
+
     try {
       const response = await apiService.put(`${API_ENDPOINTS.CATEGORY.BASE}/${categoryId}`, data);
       alert("Cập nhật danh mục thành công");
-      const updatedCategories = categories.map(category => 
+      const updatedCategories = categories.map(category =>
         category._id === categoryId ? response.data : category // Cập nhật danh mục tương ứng trong mảng
       );
       setCategories(updatedCategories);
@@ -103,7 +105,8 @@ function CategoryAdmin() {
   const dogCategories = categories.filter(category => category.type === "DOG");
   // Lọc danh mục mèo
   const catCategories = categories.filter(category => category.type === "CAT");
-  const CatcategoriesWithSTT =catCategories.map((category, index) => ({
+
+  const CatcategoriesWithSTT = catCategories.map((category, index) => ({
     ...category,
     stt: index + 1,
   }));
@@ -153,6 +156,23 @@ function CategoryAdmin() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                       />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="sel1">Loại:</label>
+                      <select
+                        className="form-control"
+                        id="sel1"
+                        value={categoryId}
+                        onChange={(e) => setCategoryId(e.target.value)}
+                      >
+                        {categories
+                          .filter((item) => item.type === 'CAT' || item.type === 'DOG')
+                          .map((item) => (
+                            <option key={item._id} value={item._id}>
+                              {item.type === 'CAT' ? 'Mèo' : 'Chó'}
+                            </option>
+                          ))}
+                      </select>
                     </div>
                   </div>
                 </form>

@@ -108,7 +108,6 @@ function accountUser() {
       alert("Xóa tài khoản thành công");
       setUsers(users.filter(user => user._id !== userId));
     } catch (error) {
-      alert("Xóa tài khoản thất bại");
       console.error(error);
     }
   };
@@ -143,14 +142,14 @@ function accountUser() {
         </div>
         <div className="input-btn mt-3">
           <input className="form-control" id="myInput" type="text" placeholder="Tìm kiếm.." />
-          <button
+          {/* <button
             className="btn btn-primary text-white newUser"
             onClick={resetForm}
             data-bs-toggle="modal"
             data-bs-target="#userForm"
           >
-            Thêm người dùng <i className="bi bi-people"></i>
-          </button>
+            {/* Thêm người dùng <i className="bi bi-people"></i> 
+          </button> */}
         </div>
         <br />
         <div className="modal fade" id="userForm">
