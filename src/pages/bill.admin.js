@@ -33,8 +33,10 @@ function billAdmin (){
             <table className="table table-bordered table-product">
               <thead>
                 <tr>
-                  <th>Tên hóa đơn</th>
-                  <th>Nội dung</th>
+                  <th>Tên người đặt</th>
+                  <th>Email</th>
+                  <th>Địa chỉ</th>
+                  <th>Phương thức đặt hàng</th>
                   <th>Số tiền</th>
                   <th>Chức năng</th>
                 </tr>
@@ -46,6 +48,8 @@ function billAdmin (){
                     <td>{bill.conten}</td>
                     <td>{bill.price}</td> */}
                    <td>mua chó</td>
+                   <td>ádfghjgfdsadsfghj</td>
+                   <td>ádfghjgfdsadsfghj</td>
                    <td>ádfghjgfdsadsfghj</td>
                    <td>111111</td>
                     <td>
