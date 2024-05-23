@@ -3,13 +3,10 @@ import HeaderAdmin from "../components/header.admin";
 import SlidebarAdmin from "../components/slidebar.admin";
 import apiService from "../services/apiService";
 import { API_ENDPOINTS } from "../utils/apiRoute";
-import getApiHooks from "../utils/getApiHook";
 import Search from "../components/search";
 import HandleProduct from "./handleProduct";
-import "../style/pages/style.admin.css"
-import { imgForm } from "../assets/images/profile-form.jpg"
-import postApiHook from "../utils/postApiHook";
-import putApiHook from "../utils/putApiHook";
+import "../style/pages/style.admin.css";
+
 
 function ProductAdmin() {
   const [products, setProducts] = useState([]);
@@ -123,6 +120,21 @@ function ProductAdmin() {
     }
   };
 
+  const deleteProduct = async (productId) => {
+    if (!window.confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
+      return;
+    }
+
+    try {
+      await apiService.delete(`${API_ENDPOINTS.PRODUCT.BASE}/${productId}`);
+      alert("Xóa sản phẩm thành công");
+      setProducts(products.filter(product => product._id !== productId));
+    } catch (error) {
+      alert("Xóa sản phẩm thất bại");
+      console.error(error);
+    }
+  };
+
   const openEditForm = (product) => {
     setCurrentProduct(product);
     setName(product.name);
@@ -144,11 +156,11 @@ function ProductAdmin() {
     return category.type === "CAT" || category.type === "DOG";
   });
 
-  // Gán STT cho sản phẩm
   const productsWithSTT = Array.isArray(products) ? products.map((product, index) => ({
     ...product,
     stt: index + 1
   })) : [];
+
   return (
     <div className="grid-container">
       <HeaderAdmin />
@@ -160,31 +172,31 @@ function ProductAdmin() {
         <div className="input-btn mt-3">
           <input className="form-control" id="myInput" type="text" placeholder="Search.." />
           <button
-            class="btn btn-primary text-white newUser"
+            className="btn btn-primary text-white newUser"
             onClick={resetForm}
             data-bs-toggle="modal"
             data-bs-target="#userForm"
           >
-            Add Product <i class="bi bi-people"></i>
+           Thêm sản phẩm <i className="bi bi-people"></i>
           </button>
         </div>
         <br />
-        <div class="modal fade" id="userForm">
-          <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title">Fill the Form</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div className="modal fade" id="userForm">
+          <div className="modal-dialog modal-dialog-centered modal-lg">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h4 className="modal-title">Fill the Form</h4>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <form action="#" id="myForm" onSubmit={currentProduct ? updateProduct : createProduct}>
-                  <div class="inputField">
+                  <div className="inputField">
                     <div>
-                      <label for="name">Hình ảnh:</label>
+                      <label htmlFor="name">Hình ảnh:</label>
                       <input type="text" name="" id="img" required autoComplete="off" value={image || ''} onChange={(e) => { setImage(e.target.value) }} />
                     </div>
                     <div>
-                      <label for="name">Tên</label>
+                      <label htmlFor="name">Tên</label>
                       <input type="text" name="" id="name" required autoComplete="off" value={name || ''} onChange={(e) => { setName(e.target.value) }} />
                     </div>
                     <div className="form-group">
@@ -204,19 +216,19 @@ function ProductAdmin() {
                     </div>
 
                     <div>
-                      <label for="age">Tuổi:</label>
+                      <label htmlFor="age">Tuổi:</label>
                       <input type="number" name="" id="age" required value={age || ''} onChange={(e) => { setAge(e.target.value) }} autoComplete="off" />
                     </div>
                     <div>
-                      <label for="age">Giá tiền:</label>
-                      <input type="number" name="" id="price" required value={price || 0} onChange={(e) => { setPrice(parseInt(e.target.value)) }} autoComplete="off" />
+                      <label htmlFor="age">Giá tiền:</label>
+                      <input type="number" name="" id="price" required value={price || ""} onChange={(e) => { setPrice(parseInt(e.target.value)) }} autoComplete="off" />
                     </div>
                     <div>
-                      <label for="city">Giới tính:</label>
+                      <label htmlFor="city">Giới tính:</label>
                       <input type="text" name="" id="gender" required autoComplete="off" value={gender || ''} onChange={(e) => { setGender(e.target.value) }} />
                     </div>
                     <div>
-                      <label for="color">Màu:</label>
+                      <label htmlFor="color">Màu:</label>
                       <input type="text" name="" id="color" required autoComplete="off" value={color || ''} onChange={(e) => { setColor(e.target.value) }} />
                     </div>
                     <div>
@@ -225,19 +237,19 @@ function ProductAdmin() {
                       <input className="input-status" type="radio" name="status" id="status_unavailable" value={"UNAVAILABLE"} checked={status === "UNAVAILABLE"} onChange={(e) => { setStatus(e.target.value) }} required />UNAVAILABLE
                     </div>
                     <div>
-                      <label for="origin">Xuất xứ:</label>
+                      <label htmlFor="origin">Xuất xứ:</label>
                       <input type="text" name="" id="origin" required value={origin || ''} onChange={(e) => { setOrigin(e.target.value) }} />
                     </div>
                     <div>
-                      <label for="descrpition">Mô tả:</label>
+                      <label htmlFor="descrpition">Mô tả:</label>
                       <input type="text" name="" id="descrpition" required autoComplete="off" value={description || ''} onChange={(e) => { setDescription(e.target.value) }} />
                     </div>
                   </div>
                 </form>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" form="myForm" class="btn btn-primary submit">Submit</button>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" form="myForm" className="btn btn-primary submit">Submit</button>
               </div>
             </div>
           </div>
@@ -258,7 +270,7 @@ function ProductAdmin() {
           </thead>
           <tbody id="myTable">
             {productsWithSTT.map((product) => (
-              <tr className="list-product" key={product.id}>
+              <tr className="list-product" key={product._id}>
                 <td>{product.stt}</td>
                 <td>{product.name}</td>
                 <td><img src={product.images[0]} alt="" /></td>
@@ -270,7 +282,7 @@ function ProductAdmin() {
                 <td id="descriptionPopup" className="hidden">{product.description}</td>
                 <td>
                   <button className="btn-handle" onClick={() => openEditForm(product)}>Sửa</button>
-                  <button className="btn-handle" id="deleteProduct">Xóa</button>
+                  <button className="btn-handle" onClick={() => deleteProduct(product._id)}>Xóa</button>
                 </td>
               </tr>
             ))}

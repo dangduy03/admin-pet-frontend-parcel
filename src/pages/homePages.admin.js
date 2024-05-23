@@ -31,15 +31,15 @@ function homePageAdmin() {
     Data();
   }, []);
   
-  const filteredCategorys = category.reduce((acc, category) => {
-    if (
-      !acc.some((item) => item.type === category.type) &&
-      (category.type === "DOG" || category.type === "CAT")
-    ) {
-      acc.push(category);
-    }
-    return acc;
-  }, []);
+  // const filteredCategorys = category.reduce((acc, category) => {
+  //   if (
+  //     !acc.some((item) => item.type === category.type) &&
+  //     (category.type === "DOG" || category.type === "CAT")
+  //   ) {
+  //     acc.push(category);
+  //   }
+  //   return acc;
+  // }, []);
 
   return (
     <div class="grid-container">
@@ -64,7 +64,7 @@ function homePageAdmin() {
               <p>DANH MỤC</p>
               <span class="material-icons-outlined">category</span>
             </div>
-            <p>{filteredCategorys.length}</p>
+            <p>{category.length}</p>
           </div>
 
           <div class="card">
@@ -91,7 +91,7 @@ function homePageAdmin() {
           </div>
 
           <div class="charts-card">
-            <h2 class="chart-title">Mua và bán hàng</h2>
+            <h2 class="chart-title">Thống kê theo danh mục</h2>
             <ChartAdmin />
           </div>
         </div>

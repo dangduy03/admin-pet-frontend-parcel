@@ -446,7 +446,7 @@ form .inputField>div label {
 }
 
 form .inputField>div input {
-  width: 75%;
+  width: 65%;
   padding: 5px;
   border: none;
   outline: none;
@@ -483,7 +483,7 @@ h4 {
 
 .newUser {
   height: 45px;
-  width: 120px;
+  width: 200px;
 }
 .input-status{
   width: 100px !important;
@@ -507,3 +507,15 @@ color: #ffff;
 .card3 {
   background-color: #d50000 !important;
 } */
+.d-flex {
+  display: flex;
+}
+
+.table-wrapper {
+  flex: 1; /* Dùng flexbox để các bảng chiếm phần bằng nhau */
+  margin-right: 10px; /* Khoảng cách giữa các bảng */
+}
+.table-category{
+  width: 440px !important;
+  margin: 30px  0  0 15px;
+}

@@ -1,7 +1,7 @@
 import apiService from "../services/apiService";
 const postApiHook = async (setData, apiCall, data) => {
     try {
-        const response = await apiService.post(apicall,data)
+        const response = await apiService.post(apiCall,data)
         if (response.status >= 200 && response.status <= 299) {
             setData(response.data);
         }
