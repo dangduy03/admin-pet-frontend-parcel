@@ -18,14 +18,17 @@ export const API_ENDPOINTS = {
     BASE: `/category`,
     ADD_CATEGORY: `${API_BASE_URL}/Categorys/CategoryController_create`,
     UPDATE_CATEGORY: `${API_BASE_URL}/category`,
-    
+
   },
   USER: {
     BASE: `/user`,
-    ADD_USER:`${API_BASE_URL}/user`,
+    ADD_USER: `${API_BASE_URL}/user`,
     UPDATE_USER: `${API_BASE_URL}/user`
   },
-  BILL:{
+  FEEDBACK: {
+    BASE: `/feedback`
+  },
+  BILL: {
     BASE: `/bill`
   }
 
